@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6013367c19bf4a4e926036810e43881, type: 3}
+  m_Name: BinderIconSet
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: e709fa721b99fcb41a2523d0a58b8943, type: 3}
+  - {fileID: 21300000, guid: 2f0b0ec8e1c927f45b3437f3979a15e1, type: 3}
+  - {fileID: 21300000, guid: ed3b97cc7c7047d428b603d8c7e82a19, type: 3}

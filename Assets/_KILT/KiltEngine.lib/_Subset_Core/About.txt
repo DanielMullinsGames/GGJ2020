@@ -1,0 +1,2 @@
+Subset_Core.lib is the heart of KiltEngine and contains structs and utilities that will be used in all KiltEngine.
+* KiltEngine is separated in subsets so we can reduce amount of files distributed.

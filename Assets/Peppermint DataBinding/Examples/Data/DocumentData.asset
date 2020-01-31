@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343e1add6792e544ea48331df538f09b, type: 3}
+  m_Name: DocumentData
+  m_EditorClassIdentifier: Assembly-CSharp:Peppermint.DataBinding.Example:DocumentData
+  list:
+  - name: TextBinder
+    category: 0
+    description: Bind the text property to a property of any type.<br>If the format
+      string is empty, the value's ToString method is called, otherwise the specified
+      format string is used. The source type can be any type.
+    iconName: OneWay
+  - name: InteractableBinder
+    category: 0
+    description: Bind Selectable targets to a boolean property.<br>The value control
+      the interactable of specified targets.
+    iconName: OneWay
+  - name: ColorBinder
+    category: 0
+    description: Bind the color property of UI.Graphic to a color property.<br>The
+      source type must be Color.
+    iconName: OneWay
+  - name: FillAmountBinder
+    category: 0
+    description: Bind the fillAmount property of Image to a float property.
+    iconName: OneWay
+  - name: ImageBinder
+    category: 0
+    description: Bind the sprite property of Image to a string property.<br>ImageBinder
+      must specify a converter, which convert a string to a sprite object. See SpriteNameConverter
+      for more information.
+    iconName: OneWay
+  - name: RectTransformBinder
+    category: 0
+    description: Bind the position properties of RectTransform to source properties.<br>Specify
+      the source path you want to bind, empty path will be ignored.
+    iconName: OneWay
+  - name: AnimatorBinder
+    category: 0
+    description: Bind the specified parameter of Animator to a property.<br>It supports
+      bool, int, float and trigger parameter types. Parameter name is the associated
+      parameter name in animator. If the parameter type is trigger, the source type
+      is AnimatorTrigger.<br>Animator will reset its parameters after deactivated,
+      the AnimatorBinder will restore the parameter in OnEnable method. Trigger is
+      also restore if the event is called within the max period.
+    iconName: OneWay
+  - name: ButtonBinder
+    category: 0
+    description: Bind Button to an ICommand property.<br>The source type must be ICommand.
+      The Execute method will be called if Button is clicked. The interactable of
+      Button is controlled by the CanExecute method.<br>The Execute method has no
+      parameter, you can use closure to capture extra parameters when you create the
+      DelegateCommand.
+    iconName: OneWay
+  - name: CustomBinder
+    category: 0
+    description: CustomBinder can bind any property of Unity Object.<br>Set the target
+      object first, you can set it by dragging a unity object to target field. Then
+      specify the number of binding in configs. In each config, the path is the source
+      path of the binding. The target path will be shown as popup menu, you can choose
+      the target property from the popup. If the target is null, the target path will
+      be shown as string field. The converter name is optional.<br>Create a binder
+      for some rarely used property is impractical. CustomBinder is a generic binder,
+      it can bind any property of Unity.Object.<br>The CustomBinder just do simple
+      binding which update the target property if source property changes. If the
+      type does not match it will use the converter you specified or the default converter.
+      If you need more than just value copying, you should create your own binder.
+    iconName: OneWay
+  - name: CollectionBinder
+    category: 0
+    description: CollectionBinder handles collection binding.<br>View template is
+      the UI template for collection item, it must contains a DataContext component
+      to work with data binding. Collection path is the source path of collection
+      binding. The container is the parent of all created view, CollectionBinding
+      does not handle any layout calculation, so it can be used with any layout group.
+      Collection view path is the source path of the created CollectionView, if you
+      do not use it just leave it empty. Enable use pool can improve the performance,
+      see ViewPoolManager for more information.<br>ObservableList<T> is the best collection
+      type for collection binding. Although the source type can be any IEnumerable
+      type, such as T[], List<T>, these types do not implement INotifyCollectionChanged
+      interface, so the view will not get updated if new item is added or deleted.
+      If you know the collection is not changed after binding, you can bind to these
+      types.
+    iconName: OneWay
+  - name: BoolSelector
+    category: 4
+    description: Activate targets by comparing the boolean value of the source property.<br>If
+      the value is true, targets are activated, otherwise inverseTarget are activated.
+      Set inverse to true will negate the value.
+    iconName: OneWay
+  - name: IntSelector
+    category: 4
+    description: Activate targets by comparing the integer value of the source property.<br>Set
+      the size of configs array first. In each config, specify the value to be tested
+      and the targets to be activated. The test function decides how the test is performed.
+      When the value changes, the IntSelector will test the value with each value
+      in configs, the passed targets will be activated, the failed targets will be
+      deactivated.
+    iconName: OneWay
+  - name: StringSelector
+    category: 4
+    description: Activate targets by comparing the string value of the source property.<br>The
+      configuration is similar to IntSelector and the testing function is string equality.
+      StringSelector is a generic selector, the source type can be any type, and the
+      default converter will handle the convention for you.<br>You can bind to Enum
+      type, just set the value to the name of enum constant.
+    iconName: OneWay
+  - name: ColorSetter
+    category: 2
+    description: ColorSetter set the color of UI.Graphic object by comparing the string
+      value of the source property.<br>The configuration is similar to StringSelector.
+      If the value matches the given config, the color from the matched config will
+      be used, otherwise the default color is used.
+    iconName: OneWay
+  - name: CustomSetter
+    category: 2
+    description: CustomSetter can be used to set any property of Unity Object.<br>The
+      configuration is similar to StringSelector. If the value matches the given config,
+      the style is applied to target object.<br>You should specify the target first.
+      The style contains a group of StyleSetter, and in each StyleSetter you can choose
+      the target path from popup menu. The value type is automatically selected based
+      on the property type, you only need to specify the value.<br>If the target is
+      null, the target path will be shown as string field and the value type must
+      be manually setup.
+    iconName: OneWay
+  - name: ComponentGetter
+    category: 3
+    description: Gets component from the view.<br>ComponentGetter creates a one-way
+      to source binding. Once bound the source gets the value from the target, and
+      the source value is set to null if unbound. You can set the target by dragging
+      a component to target field.
+    iconName: OneWayToSource
+  - name: ToggleBinder
+    category: 1
+    description: Bind Toggle to a boolean property.<br>ToggleBinder is a two-way binder,
+      it get the value from the source, and update the source if Toggle's value changes.
+    iconName: TwoWay
+  - name: InputFieldBinder
+    category: 1
+    description: Bind InputField to a string property.<br>InputFieldBinder is a two-way
+      binder, it get the text value from the source (string type), and update the
+      source if InputField's value changes.<br>Text path is the source path of the
+      text, and the update source trigger decides when to update the source. If you
+      need to validate input characters, specify validate input path, otherwise leave
+      it empty. The source type of validate input is a delegate, which must be compatible
+      with the InputField.OnValidateInput delegate.
+    iconName: TwoWay
+  - name: DropdownBinder
+    category: 1
+    description: Bind Dropdown to an int property.<br>DropdownBinder is a two-way
+      binder, it get the value from the source (int type), and update the source if
+      Dropdown's value changes.<br>The value path must specified, it's the index of
+      currently selected option. String options path is optional, if specified, a
+      list of string will be used as options.
+    iconName: TwoWay
+  - name: SliderBinder
+    category: 1
+    description: Bind Slider to a float property.<br>SliderBinder is a two-way binder,
+      it get the value from the source (float type), and update the source if Slider's
+      value changes.<br>You must specify value path, which is the source path of Slider's
+      value. The min value path and max value path is optional. If specified, it control
+      the min and max value of the Slider.
+    iconName: TwoWay
+  - name: ScrollbarBinder
+    category: 1
+    description: Bind Scrollbar to a float property.<br>ScrollbarBinder is a two-way
+      binder, it get the value from the source (float type), and update the source
+      if Scrollbar's value changes.
+    iconName: TwoWay
+  - name: ScrollRectBinder
+    category: 1
+    description: Bind ScrollRect to a Vector2 property.<br>ScrollRectBinder is a two-way
+      binder, it get the value from the source (Vector2 type), and update the source
+      if ScrollRect's value changes.
+    iconName: TwoWay
+  - name: TextMultiBinder
+    category: 0
+    description: Bind the text property to multi properties.<br>First set the size
+      of configs, and then set the target path in each entry. If the format string
+      is empty, string.Concat method is used to concatenate all string values, otherwise
+      the specified format string is used. The source type can be any type.
+    iconName: OneWay
+  - name: ListDynamicBinder
+    category: 0
+    description: 'ListDynamicBinder is a collection binder which binds to IList object.<br>Unlike
+      the CollectionBinder, it only creates and binds the visible items of the list.
+      It requires a dynamic controller to calculate the visible items and handle the
+      layout. It''s very useful for scroll views with a large amount of items, e.g.
+      leaderboard. '
+    iconName: OneWay
+  - name: CollectionMultiViewBinder
+    category: 0
+    description: "CollectionMultiViewBinder is an extended version of CollectionBinder.
+      It supports multiple view templates.<br> \u201CView Selector Path\u201D is the
+      source path for the view selector. It\u2019s a delegate that will be called
+      when the view is created. You can set different view templates in the configs.
+      In each config, you must specify a view template, and set a name tag (optional).
+      When the delegate is called, you can decide which view template to be used based
+      on the item object."
+    iconName: OneWay

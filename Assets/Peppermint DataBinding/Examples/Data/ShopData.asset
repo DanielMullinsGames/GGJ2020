@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be74909379ca0f345b6ea086849462d4, type: 3}
+  m_Name: ShopData
+  m_EditorClassIdentifier: Assembly-CSharp:Peppermint.DataBinding.Example:ShopData
+  itemList:
+  - itemType: 0
+    amount: 100
+    name: 100 Gold
+    iconName: Gold
+    price: 1.99000001
+  - itemType: 0
+    amount: 200
+    name: 200 Gold
+    iconName: Gold
+    price: 3.99000001
+  - itemType: 0
+    amount: 500
+    name: 500 Gold
+    iconName: Gold
+    price: 4.98999977
+  - itemType: 0
+    amount: 1000
+    name: 1000 Gold
+    iconName: Gold
+    price: 19.9899998
+  - itemType: 0
+    amount: 2000
+    name: 2000 Gold
+    iconName: Gold
+    price: 39.9900017
+  - itemType: 0
+    amount: 5000
+    name: 5000 Gold
+    iconName: Gold
+    price: 49.9900017
+  - itemType: 1
+    amount: 10
+    name: 10 Gems
+    iconName: Gem
+    price: 2.99000001
+  - itemType: 1
+    amount: 20
+    name: 20 Gems
+    iconName: Gem
+    price: 5.98999977
+  - itemType: 1
+    amount: 50
+    name: 50 Gems
+    iconName: Gem
+    price: 14.9899998
+  - itemType: 1
+    amount: 100
+    name: 100 Gems
+    iconName: Gem
+    price: 29.9899998
+  - itemType: 1
+    amount: 200
+    name: 200 Gems
+    iconName: Gem
+    price: 59.9900017
+  - itemType: 1
+    amount: 500
+    name: 500 Gems
+    iconName: Gem
+    price: 149.990005

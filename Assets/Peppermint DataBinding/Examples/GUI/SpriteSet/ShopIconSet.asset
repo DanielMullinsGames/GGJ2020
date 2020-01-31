@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6013367c19bf4a4e926036810e43881, type: 3}
+  m_Name: ShopIconSet
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 17a9bc6f62cf66743bb3c967d04b3fe4, type: 3}
+  - {fileID: 21300000, guid: e2552be5c6692274ebb157b15c06b1c3, type: 3}

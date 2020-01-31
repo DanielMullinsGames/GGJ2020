@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &129374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 429374}
+  - 212: {fileID: 21229376}
+  - 114: {fileID: 11429370}
+  - 50: {fileID: 5029380}
+  - 114: {fileID: 11429372}
+  - 114: {fileID: 11429374}
+  - 61: {fileID: 6163518}
+  - 61: {fileID: 6150214}
+  m_Layer: 0
+  m_Name: 00_Wood_CustomNode70x35
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429374
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!50 &5029380
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129374}
+  m_UseAutoMass: 0
+  m_Mass: 0.24499999
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &6150214
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129374}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.86000013, y: 0.47000006}
+--- !u!61 &6163518
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129374}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.0015912269, y: -0.11598494}
+  serializedVersion: 2
+  m_Size: {x: 0.80589736, y: 0.23803024}
+--- !u!114 &11429370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290e8645e91193241a8b85fc7cae41a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_damageSprites:
+  - {fileID: 21300000, guid: 91bc8cad712363c4baaf2c85613ba734, type: 3}
+  - {fileID: 21300000, guid: f1fc027eb83cc6f479b409b59240798f, type: 3}
+  - {fileID: 21300000, guid: 1c7fa729d5c970d4b828e0e597e605ef, type: 3}
+  m_collisionEffectObject: {fileID: 100000, guid: fed0a32cdd57a134198dff3dc8ff2307,
+    type: 2}
+  m_destroyEffectObject: {fileID: 100004, guid: 95c0fb2c85537a64c9cbe64c29cb3dde,
+    type: 2}
+  m_minDamageToShowCollisionEffect: 0.6
+  m_maxLife: 4.9
+  _currentLife: 4.9
+  m_attack: 1
+  m_defense: 1
+  m_automaticDestroyPolitic: 1
+  m_maxDistanceToOutOfBounds: 5
+  m_useFragments: 1
+  m_acceptUserClick: 1
+  m_safeRemove: 0
+  m_canDestroyOnClick: 1
+--- !u!114 &11429372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b02694b8e44a44bb81ea60ffda14cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_spriteList:
+  - {fileID: 21300000, guid: 9caabbdc975c77f48a8389d695f46e11, type: 3}
+  - {fileID: 21300000, guid: 05097965d7d9fe944ae4128eb96fe741, type: 3}
+  - {fileID: 21300000, guid: 6a9f419801616cf4c9bad3c111c19ec3, type: 3}
+  - {fileID: 21300000, guid: d12da25c379e69a4e8f7f6bd9eb70bb7, type: 3}
+  - {fileID: 21300000, guid: f8226318d93e96240b09ec9f8e4ba480, type: 3}
+  m_individualFragmentEffect: {fileID: 0}
+  m_maxAmountOfFragments: 7
+  m_minImpulseForce: 0.003
+  m_maxImpulseForce: 0.012
+  m_minAngularVelocity: 400
+  m_maxAngularVelocity: 800
+  m_lifeTime: 1.5
+  m_minInitialOffset: {x: -0.4, y: -0.23}
+  m_maxInitialOffset: {x: 0.4, y: 0.23}
+  m_fragmentScale: 1
+  m_fragmentMass: 0.008
+  m_fragmentGravityScale: 0.7
+  m_createFragmentCollider: 1
+  m_enableIndividualFragmentEffect: 0
+  m_useOldRigidBodyVelocity: 0
+  m_isLocalDistance: 1
+--- !u!114 &11429374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb62291878911b44a8420eaa50677c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _size: {x: 70, y: 35}
+  _density: 0.0001
+  _resistence: 0.002
+  _areaType: 0
+--- !u!212 &21229376
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129374}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 91bc8cad712363c4baaf2c85613ba734, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: _resistence
+      value: .00200000009
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _size.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _size.y
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cdda02e3923edc41b90c3c1f35c4ed2, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 129374}
+  m_IsPrefabParent: 1

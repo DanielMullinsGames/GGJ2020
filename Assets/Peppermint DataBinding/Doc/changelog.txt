@@ -1,0 +1,40 @@
+﻿Version 1.5.1
+- Added DataContextBinder and ProxyDataContext.
+- Added new examples to demonstrate DataContextBinder.
+- Added new examples for handling nested source changes.
+- Minor improvements and bug fixes.
+
+Version 1.5.0
+- Added ObservableDictionary.
+- Added ListSyncController and DictionarySyncController.
+- Added new examples to demonstrate sync controller.
+- Updated code generation for ImplicitConverter to support assembly definition files.
+- Updated collection event to avoid GC.
+
+Version 1.4.0
+- Added TextMesh Pro support.
+- Added EnumSelector.
+- Added new examples to demonstrate localization and multiple views.
+- Updated code to support assembly definition files. 
+- Minor improvements and bug fixes.
+
+Version 1.3.0
+- Added NGUI support.
+- Added new examples for NGUI binders.
+- Code refactoring.
+
+Version 1.2.0
+- Added CanvasPrinter.
+- Added CallerMemberNameAttribute support for .NET 4.6.
+- Fixed Unity 2017.x compatibility issues.
+
+Version 1.1.0
+- Added ListDynamicBinder.
+- Added TextMultiBinder.
+- Added CollectionMultiViewBinder.
+- Added new examples for ListDynamicBinder and CollectionMultiViewBinder.
+- Added new examples to demonstrate the difference between MVC and MVVM design pattern.
+- Code refactoring.
+
+Version 1.0.0
+- Initial release.

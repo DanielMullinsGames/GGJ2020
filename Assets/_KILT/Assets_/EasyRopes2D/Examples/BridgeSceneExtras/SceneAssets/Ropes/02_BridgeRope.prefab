@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &107500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 407500}
+  - component: {fileID: 11407500}
+  m_Layer: 0
+  m_Name: 02_BridgeRope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407500
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.50003, y: -180.00002, z: 0}
+  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11407500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4fc16e6146be542a884588f576d4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_objectA: {fileID: 0}
+  m_objectB: {fileID: 0}
+  m_amountOfNodes: 5
+  m_autoCalculateAmountOfNodes: 1
+  m_customNodePrefab: {fileID: 129374, guid: d799516129b203f429cff88e1b088a2a, type: 2}
+  m_nodeMass: 1.5
+  m_nodeDistanceOffSet: 0
+  m_nodeSprite: {fileID: 21300000, guid: 91bc8cad712363c4baaf2c85613ba734, type: 3}
+  m_nodeMaterial: {fileID: 2100000, guid: 40f8fd869bca0fd4d93a9be4281be2bb, type: 2}
+  m_nodeSpriteGlobalSize: {x: 0.86, y: 0.47}
+  m_nodeLocalScale: {x: 1.5, y: 1.5}
+  m_jointCollider: 1
+  m_userCanCutTheRope: 0
+  m_ropeCanBreak: 1
+  m_breakAngle: 180
+  m_ropeMaxSizeMultiplier: 1.1
+  m_breakEffect: {fileID: 100000, guid: d3ddbb0292448cb48b1d1ad834b3d51b, type: 2}
+  m_ropeSortingLayerName: Default
+  m_ropeDepth: 21
+  m_ropeMaterial: {fileID: 0}
+  m_useLineRenderer: 0
+  m_lineRendererCurveWidth:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_lineRendererEndCapVertices: 0
+  m_lineRendererCornerVertices: 0
+  m_isSpringNode: 1
+  m_springFrequency: 5
+  m_springDampingValue: 0
+  m_tensionHelperAddOption: 1
+  m_nonTensionedColor: {r: 1, g: 1, b: 1, a: 1}
+  m_tensionedColor: {r: 1, g: 0, b: 0, a: 1}
+  m_useTensionColors: 0
+  m_maxDistanceOnlyMode: 0
+  m_ropeBreakAction: 0
+  m_destroyTime: 1.4
+  m_lowMassVariationWhenBroken: 0
+  m_stableFirstAndLastNodes: 0
+  m_editorRopeStyle: 1
+  m_nodeGravityScale: 1
+  m_nodeAngularDrag: 0.4
+  m_nodeLinearDrag: 0.2
+  m_nodeCollisionDetectionType: 0
+  _needUpdateLineRenderer: 1
+  _needUpdateRope: 1
+  m_nodes: []
+  m_chunks: []
+  m_tackAIndex: 0
+  m_tackBIndex: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 107500}
+  m_IsPrefabParent: 1
