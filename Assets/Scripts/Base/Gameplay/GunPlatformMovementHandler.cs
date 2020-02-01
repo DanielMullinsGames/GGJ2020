@@ -11,6 +11,8 @@ public class GunPlatformMovementHandler : MonoBehaviour
     public LayerMask EdgeLineMask;
     public float StartingAngle;
 
+    private bool mMovingRight;
+    private bool mMovingLeft;
     private float mCurrentAngle;
     private PlayerControlInputHandler mInputHandler;
 
@@ -28,6 +30,14 @@ public class GunPlatformMovementHandler : MonoBehaviour
             mInputHandler.ConsumeInput();
         }
 
+        if (mMovingLeft || mMovingRight)
+        {
+            ; float direction = 0;
+            if (mMovingRight) direction += 1;
+            if (mMovingLeft) direction -= 1;
+            Move(new Vector2(direction, 0f));
+        }
+
     }
 
     private void Move(Vector2 axis)
@@ -42,5 +52,25 @@ public class GunPlatformMovementHandler : MonoBehaviour
             transform.position = hit.point;
             transform.rotation = Quaternion.Euler(0f, 0f, mCurrentAngle + StartingAngle);
         }
+    }
+
+    public void SetMovingRight()
+    {
+        mMovingRight = true;
+    }
+
+    public void SetMovingLeft()
+    {
+        mMovingLeft = true;
+    }
+
+    public void UnsetMovingRight()
+    {
+        mMovingRight = false;
+    }
+
+    public void UnsetMovingLeft()
+    {
+        mMovingLeft = false;
     }
 }
