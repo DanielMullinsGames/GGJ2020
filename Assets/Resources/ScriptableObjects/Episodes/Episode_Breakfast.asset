@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_Breakfast
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
@@ -60,7 +61,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: "You utter \u201CI\u2019m \u2026\u201D as she turns away from you"
+    Outcome: You try and stutter out an apology as she turns away from you
     EndsGame: 0
     HealthChange: 0
   DarkChoices:
@@ -71,7 +72,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: "\u201DLookin great this morning\u201D you snarkily say as you leave"
+    Outcome: You make a snarky commen as you slip out the door
     EndsGame: 0
     HealthChange: -1
-  Background: {fileID: 0}

@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -834989189
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -8045983330867883452, guid: 19bf2806539c638438e8daabab5aa059,
     type: 3}
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -834989189
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 7239536125774044833, guid: 19bf2806539c638438e8daabab5aa059,
     type: 3}
@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 7545670223096454419}
   - component: {fileID: 7545670223096454428}
   - component: {fileID: 7545670223096454429}
+  - component: {fileID: 7794615887261360918}
   m_Layer: 12
   m_Name: Plunger
   m_TagString: Untagged
@@ -423,7 +424,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -834989189
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 5551957760813471792, guid: 19bf2806539c638438e8daabab5aa059,
     type: 3}
@@ -504,3 +505,15 @@ SpringJoint2D:
   m_Distance: 0.15
   m_DampingRatio: 1
   m_Frequency: 3
+--- !u!114 &7794615887261360918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545670223096454431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7bf7278ff67824d930469c761b815c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
