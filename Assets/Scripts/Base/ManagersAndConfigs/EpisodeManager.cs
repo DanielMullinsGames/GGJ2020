@@ -24,7 +24,7 @@ public class EpisodeManager : MonoBehaviour
 
     public void DisplayEnterEpisode(Episode episode)
     {
-        EpisodeTextArea.text = episode.Description;
+        EpisodeTextArea.text = episode.GetEpisodeText();
     }
 
     public void DisplayResolveEpisode(Episode episode, EpisodeChoice choice)
@@ -34,7 +34,7 @@ public class EpisodeManager : MonoBehaviour
 
     public void DisplayPlayingEpisode(Episode episode)
     {
-        //EpisodeTextArea.text = "";
+        EpisodeTextArea.text = "";
     }
 
 }
