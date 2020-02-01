@@ -46,6 +46,7 @@ public class GameStateManager : MonoBehaviour
     private IEnumerator EnterEpisode(Episode episode)
     {
         Entering = true;
+        CurrentEpisode = episode;
 
         EpisodeManager.Instance.DisplayEnterEpisode(episode);
         yield return new WaitForSeconds(2f);
