@@ -21,8 +21,10 @@ public class CharacterController2D : MonoBehaviour
 
     [Header("Events")]
     [Space]
-
     public UnityEvent OnLandEvent;
+
+    [SerializeField]
+    private CharacterAnimationController animController;
 
     [System.Serializable]
     public class BoolEvent : UnityEvent<bool> { }
@@ -50,19 +52,19 @@ public class CharacterController2D : MonoBehaviour
             {
                 m_Grounded = true;
                 if (!wasGrounded)
+                {
                     OnLandEvent.Invoke();
+                    animController.Land();
+                }
             }
         }
     }
-
 
     public void Move(float move, bool jump)
     {
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
         {
-
-
             // Move the character by finding the target velocity
             Vector3 targetVelocity = new Vector2(move * m_Speed, m_Rigidbody2D.velocity.y);
             // And then smoothing it out and applying it to the character
@@ -80,6 +82,8 @@ public class CharacterController2D : MonoBehaviour
                 // ... flip the player.
                 Flip();
             }
+
+            animController.SetRunning(Mathf.Abs(move) > 0.01f);
         }
         // If the player should jump...
         if (m_Grounded && jump)
@@ -87,6 +91,7 @@ public class CharacterController2D : MonoBehaviour
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            animController.Jump();
         }
     }
 
