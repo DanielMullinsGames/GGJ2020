@@ -19,4 +19,19 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
         Choice = choice;
         Text.text = Choice.Text;
     }
+
+    public void SelectChoice()
+    {
+        GameStateManager.Instance.SelectChoice(Choice);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.GetComponent<Bullet>() != null)
+        {
+            collision.collider.gameObject.GetComponent<Bullet>().TriggerHit();
+            GameStateManager.Instance.SelectChoice(Choice);
+            Destroy(gameObject);
+        }
+    }
 }
