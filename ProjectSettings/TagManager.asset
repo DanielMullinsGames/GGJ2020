@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - tack
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Projectile
   - 
   - 
   - 
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Very Background
+    uniqueID: 1851424875
+    locked: 0
+  - name: Background
+    uniqueID: 3459978107
+    locked: 0
+  - name: Foreground
+    uniqueID: 4157531161
+    locked: 0
+  - name: UI
+    uniqueID: 2155508459
     locked: 0
