@@ -31,6 +31,7 @@ public class GameStateManager : MonoBehaviour
     public void StartGame()
     {
         StartCoroutine(EnterEpisode(GameConfig.Instance.StartingEpisode));
+        PlayerManager.Instance.SpawnPlayers();
     }
 
     public void SelectChoice(EpisodeChoice choice)

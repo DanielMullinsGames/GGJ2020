@@ -17,7 +17,7 @@ TagManager:
   - 
   - Player
   - Projectile
-  - 
+  - Skull
   - 
   - 
   - 
@@ -51,6 +51,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 4157531161
+    locked: 0
+  - name: Player
+    uniqueID: 1087853867
     locked: 0
   - name: UI
     uniqueID: 2155508459

@@ -6,6 +6,8 @@ public class PlayerConfig : MonoBehaviour
 {
     public static PlayerConfig Instance;
 
+    public List<Motivation> PlayableMotivations;
+
     private void Awake()
     {
         Instance = this;
