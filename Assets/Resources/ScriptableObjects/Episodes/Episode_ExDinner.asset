@@ -12,31 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_ExDinner
   m_EditorClassIdentifier: 
-  PotentialDescriptions: []
+  PotentialDescriptions:
+  - Criteria:
+      RequiredPlotPoints:
+      - {fileID: 11400000, guid: 162c3e040820dcd44b75c44cac0fa282, type: 2}
+      BlockingPlotPoints: []
+    Text: "You go out to a mutual old fav. It\u2019s like old times. She asks you
+      about your head"
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: "You go out to a mutual old fav. It\u2019s a bit awkward. She asks you
+      about your head"
   Choices:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for ambition
+    Text: Avoid
     Scores:
     - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
       Score: 1
+    - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
+      Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Ambitious!
+    NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
+    Outcome: You waffle and quickly change the subject
     EndsGame: 0
     HealthChange: 0
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for guilt
+    Text: Open Up
     Scores:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Why do you feel guilty?
+    NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
+    Outcome: "It hurts, but you let her know how you\u2019ve been feeling lately"
     EndsGame: 0
-    HealthChange: 0
-  DarkChoices: []
+    HealthChange: 2
+  DarkChoices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Blame Her
+    Scores: []
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
+    Outcome: You tell her it is her fault, ruining the night
+    EndsGame: 0
+    HealthChange: -2
   Background: {fileID: 0}

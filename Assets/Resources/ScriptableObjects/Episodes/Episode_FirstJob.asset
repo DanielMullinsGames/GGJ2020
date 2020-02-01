@@ -12,31 +12,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_FirstJob
   m_EditorClassIdentifier: 
-  PotentialDescriptions: []
+  PotentialDescriptions:
+  - Criteria:
+      RequiredPlotPoints:
+      - {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
+      BlockingPlotPoints: []
+    Text: "When you arrive, your first customer is furious. You didn\u2019t show
+      yesterday, and now you\u2019re late. He demands to know why"
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: "When you arrive, your first customer is angry. You didn\u2019t show yesterday,
+      and he demands to know why"
   Choices:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for ambition
+    Text: Sincere Apology
+    Scores:
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 11400000, guid: 75dcddeca1a968d4993ae8bf19f442f5, type: 2}
+    NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
+    Outcome: He seems to believe you, and calms down
+    EndsGame: 0
+    HealthChange: 1
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Fake Apology
     Scores:
     - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
       Score: 1
+    - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
+      Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Ambitious!
+    NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
+    Outcome: You give some platitudes. He stays upset while you work
     EndsGame: 0
     HealthChange: 0
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for guilt
+    Text: Crack Joke
     Scores:
-    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
       Score: 1
-    PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Why do you feel guilty?
+    PlotToApply: {fileID: 11400000, guid: 75dcddeca1a968d4993ae8bf19f442f5, type: 2}
+    NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
+    Outcome: You make jokes while you work, cheering him up
     EndsGame: 0
-    HealthChange: 0
-  DarkChoices: []
+    HealthChange: 1
+  DarkChoices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Lash Out
+    Scores: []
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
+    Outcome: You snap back at him. He leaves you alone for the rest of the job
+    EndsGame: 0
+    HealthChange: -1
   Background: {fileID: 0}

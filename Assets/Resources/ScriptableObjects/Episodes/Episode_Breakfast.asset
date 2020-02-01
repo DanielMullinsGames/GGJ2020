@@ -60,7 +60,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: "You utter \u201CI\u2019m \u2026\u201D, she turns away from you"
+    Outcome: "You utter \u201CI\u2019m \u2026\u201D as she turns away from you"
     EndsGame: 0
     HealthChange: 0
   DarkChoices:

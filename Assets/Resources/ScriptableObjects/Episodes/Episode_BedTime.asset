@@ -12,31 +12,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_BedTime
   m_EditorClassIdentifier: 
-  PotentialDescriptions: []
+  PotentialDescriptions:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: As you settle down on your couch, you think about your day
   Choices:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for ambition
+    Text: Plan Tomorrow
     Scores:
     - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Ambitious!
-    EndsGame: 0
+    Outcome: Today is done, you plan for tomorrow
+    EndsGame: 1
     HealthChange: 0
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for guilt
+    Text: Feel Anxious
     Scores:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Why do you feel guilty?
-    EndsGame: 0
+    Outcome: You worry you didn't do a good job
+    EndsGame: 1
+    HealthChange: 0
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Browse Internet
+    Scores:
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
+    Outcome: You stay up looking at your phone
+    EndsGame: 1
+    HealthChange: 0
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Pass Out
+    Scores:
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
+    Outcome: You're tired, and pass out immediately
+    EndsGame: 1
     HealthChange: 0
   DarkChoices: []
   Background: {fileID: 0}

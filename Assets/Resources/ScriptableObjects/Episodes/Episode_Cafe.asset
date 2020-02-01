@@ -32,7 +32,7 @@ MonoBehaviour:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
+    NextScene: {fileID: 11400000, guid: af2841825773256469134ec600b7b362, type: 2}
     Outcome: "You get the cheapest option. You don\u2019t think you deserve better"
     EndsGame: 0
     HealthChange: 0
@@ -47,21 +47,31 @@ MonoBehaviour:
     - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
+    NextScene: {fileID: 11400000, guid: af2841825773256469134ec600b7b362, type: 2}
     Outcome: You get the fanciest option. You deserve it
     EndsGame: 0
     HealthChange: 0
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for guilt
+    Text: Regular
     Scores:
-    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+    - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Why do you feel guilty?
+    NextScene: {fileID: 11400000, guid: af2841825773256469134ec600b7b362, type: 2}
+    Outcome: You get what you always get
     EndsGame: 0
-    HealthChange: 0
-  DarkChoices: []
+    HealthChange: 1
+  DarkChoices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Drink
+    Scores: []
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
+    Outcome: You skip the coffee, and go to the liquor store next door
+    EndsGame: 0
+    HealthChange: -1
   Background: {fileID: 0}

@@ -12,31 +12,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_BossCall
   m_EditorClassIdentifier: 
-  PotentialDescriptions: []
+  PotentialDescriptions:
+  - Criteria:
+      RequiredPlotPoints:
+      - {fileID: 11400000, guid: 75dcddeca1a968d4993ae8bf19f442f5, type: 2}
+      BlockingPlotPoints: []
+    Text: "Your boss calls you between jobs. She\u2019s upset about your slow progress
+      lately"
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: "Your boss calls you between jobs. She\u2019s upset about your slow progress
+      lately, and your last customer called in a complaint"
   Choices:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for ambition
+    Text: Promise Improvement
     Scores:
     - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Ambitious!
+    NextScene: {fileID: 11400000, guid: 9303889a9075f164c9eaf7f1bb843228, type: 2}
+    Outcome: "You swear you\u2019ll do better, bringing up recent events as justification"
+    EndsGame: 0
+    HealthChange: 1
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Manipulate
+    Scores:
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 9303889a9075f164c9eaf7f1bb843228, type: 2}
+    Outcome: You play the pity card. It gets her off your back
     EndsGame: 0
     HealthChange: 0
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for guilt
+    Text: 'Apologize '
     Scores:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
+    - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
+      Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Why do you feel guilty?
+    NextScene: {fileID: 11400000, guid: 9303889a9075f164c9eaf7f1bb843228, type: 2}
+    Outcome: You apologize for your recent behaviour, bringing up recent events to
+      explain
     EndsGame: 0
     HealthChange: 0
-  DarkChoices: []
+  DarkChoices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Ghost
+    Scores: []
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 9303889a9075f164c9eaf7f1bb843228, type: 2}
+    Outcome: You pretend you're going through a tunnel and hang up
+    EndsGame: 0
+    HealthChange: -1
   Background: {fileID: 0}

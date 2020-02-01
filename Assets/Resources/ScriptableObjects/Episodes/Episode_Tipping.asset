@@ -12,31 +12,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_Tipping
   m_EditorClassIdentifier: 
-  PotentialDescriptions: []
+  PotentialDescriptions:
+  - Criteria:
+      RequiredPlotPoints:
+      - {fileID: 11400000, guid: 0973e1e55c10a844b8360dc7c3078c05, type: 2}
+      BlockingPlotPoints: []
+    Text: You finish up, and it is time It is time to pay the waiter. You gave your
+      spare change away already to the homeless man
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: You finish up, and it is time It is time to tip the waitress
   Choices:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for ambition
+    Text: Tip a fiver
     Scores:
-    - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Ambitious!
+    NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
+    Outcome: Hopefully she appreciates it
+    EndsGame: 0
+    HealthChange: 0
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints:
+      - {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
+    Text: Normal Tip
+    Scores:
+    - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
+    Outcome: You leave your spare change
     EndsGame: 0
     HealthChange: 0
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: This is a choice for guilt
+    Text: Skimp
     Scores:
-    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+    - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Why do you feel guilty?
+    NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
+    Outcome: You leave nothing
     EndsGame: 0
     HealthChange: 0
-  DarkChoices: []
+  DarkChoices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Dine n' Dash
+    Scores: []
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
+    Outcome: You leave while she's distracted
+    EndsGame: 0
+    HealthChange: -1
   Background: {fileID: 0}

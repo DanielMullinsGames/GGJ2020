@@ -33,10 +33,10 @@ public struct EpisodeText
 
 public class Episode : ScriptableObject
 {
+    public Sprite Background;
     public List<EpisodeText> PotentialDescriptions;
     public List<EpisodeChoice> Choices;
     public List<EpisodeChoice> DarkChoices;
-    public Sprite Background;
 
     public EpisodeChoice GetRandomChoice()
     {
