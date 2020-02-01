@@ -11,6 +11,7 @@ public class EpisodeManager : MonoBehaviour
     public TextMeshPro EpisodeTextArea;
 
     private List<GameObject> mChoices = new List<GameObject>();
+    private GameObject mCurrentBackground;
 
     private void Awake()
     {
@@ -37,4 +38,18 @@ public class EpisodeManager : MonoBehaviour
         EpisodeTextArea.text = "";
     }
 
+    public IEnumerator TransitionScreen(Episode next)
+    {
+        if (next.BackgroundPrefab != null && (mCurrentBackground == null || mCurrentBackground.name != next.BackgroundPrefab.name))
+        {
+            if (mCurrentBackground != null)
+            {
+                yield return new WaitForSeconds(1f);
+                Destroy(mCurrentBackground);
+            }
+
+            mCurrentBackground = GameObject.Instantiate(next.BackgroundPrefab, Vector3.zero, Quaternion.identity);
+            mCurrentBackground.name = next.BackgroundPrefab.name;
+        }
+    }
 }

@@ -1238,7 +1238,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139458837
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
 --- !u!224 &1970608525
 RectTransform:
@@ -1399,6 +1399,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BackgroundController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930694976251537199, guid: 6aa8f019ee59b0c4bb90827eebc27081,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aa8f019ee59b0c4bb90827eebc27081, type: 3}
@@ -1690,6 +1695,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 430560900227332760, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 916420476}
+    - target: {fileID: 430560900227332760, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMovingLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 430560900227332760, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: ExitEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 916420476}
+    - target: {fileID: 430560900227332760, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: ExitEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnsetMovingLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876740715651358794, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1914838056}
+    - target: {fileID: 1876740715651358794, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerFire
+      objectReference: {fileID: 0}
     - target: {fileID: 2672219281154876691, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
         type: 3}
       propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1700,6 +1735,26 @@ PrefabInstance:
       propertyPath: ExitEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 916420476}
+    - target: {fileID: 5594097809270508752, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 916420476}
+    - target: {fileID: 5594097809270508752, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMovingRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594097809270508752, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: ExitEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 916420476}
+    - target: {fileID: 5594097809270508752, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: ExitEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnsetMovingRight
+      objectReference: {fileID: 0}
     - target: {fileID: 7876289754538136411, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
         type: 3}
       propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target

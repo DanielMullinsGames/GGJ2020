@@ -49,6 +49,7 @@ public class GameStateManager : MonoBehaviour
         Entering = true;
         CurrentEpisode = episode;
 
+        yield return EpisodeManager.Instance.StartCoroutine(EpisodeManager.Instance.TransitionScreen(episode));
         EpisodeManager.Instance.DisplayEnterEpisode(episode);
         yield return new WaitForSeconds(2f);
 

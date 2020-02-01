@@ -46,6 +46,9 @@ TagManager:
   - name: Very Background
     uniqueID: 1851424875
     locked: 0
+  - name: GunPlatform
+    uniqueID: 3601952823
+    locked: 0
   - name: Background
     uniqueID: 3459978107
     locked: 0

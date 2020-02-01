@@ -33,7 +33,7 @@ public struct EpisodeText
 
 public class Episode : ScriptableObject
 {
-    public Sprite Background;
+    public GameObject BackgroundPrefab;
     public List<EpisodeText> PotentialDescriptions;
     public List<EpisodeChoice> Choices;
     public List<EpisodeChoice> DarkChoices;
