@@ -49,8 +49,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.07}
-  m_Size: {x: 0.25, y: 0.5}
+  m_Offset: {x: 0, y: -0.05}
+  m_Size: {x: 0.22, y: 0.4}
   m_Direction: 0
 --- !u!114 &3655627082681238004
 MonoBehaviour:
@@ -73,6 +73,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 7424
   m_GroundCheck: {fileID: 3655627083019108985}
+  k_GroundedRadius: 0.2
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
