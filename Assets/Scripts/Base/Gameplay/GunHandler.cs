@@ -52,5 +52,6 @@ public class GunHandler : MonoBehaviour
         GameObject fireObj = GameObject.Instantiate(BulletPrefab, FirePoint.transform.position, BulletPrefab.transform.rotation);
         Vector3 direction = FirePoint.transform.position - Center.transform.position;
         fireObj.GetComponent<Rigidbody2D>().velocity = direction.normalized * FireSpeed;
+        fireObj.transform.eulerAngles = new Vector3(0f, 0f, UnityEngine.Random.value * 360f);
     }
 }
