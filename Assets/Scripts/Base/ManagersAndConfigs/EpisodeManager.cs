@@ -9,7 +9,7 @@ public class EpisodeManager : MonoBehaviour
 {
     public static EpisodeManager Instance;
 
-    public TextMeshPro EpisodeTextArea;
+    public DescriptionUI DescriptionUI;
 
     private List<GameObject> mChoices = new List<GameObject>();
     private GameObject mCurrentBackground;
@@ -28,17 +28,17 @@ public class EpisodeManager : MonoBehaviour
 
     public void DisplayEnterEpisode(Episode episode)
     {
-        EpisodeTextArea.text = episode.GetEpisodeText();
+        DescriptionUI.PlayMessage(episode.GetEpisodeText());
     }
 
     public void DisplayResolveEpisode(Episode episode, EpisodeChoice choice)
     {
-        EpisodeTextArea.text = choice.Outcome;
+        DescriptionUI.PlayMessage(choice.Outcome);
     }
 
     public void DisplayPlayingEpisode(Episode episode)
     {
-        EpisodeTextArea.text = "";
+        DescriptionUI.PlayMessage("");
     }
 
     public IEnumerator TransitionScreen(Episode next)
