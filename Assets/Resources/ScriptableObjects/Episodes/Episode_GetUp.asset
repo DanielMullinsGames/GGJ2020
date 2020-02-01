@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
+  m_Name: Episode_GetUp
+  m_EditorClassIdentifier: 
+  PotentialDescriptions:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: You wake up on the couch in the living room. My ex, now my roommate, has
+      the bedroom
+  Choices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Up  and at'em!
+    Scores:
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 11400000, guid: 2e69520192e67414fbf074835f86ed66, type: 2}
+    NextScene: {fileID: 11400000, guid: 61c476c97990c2a4bae1472fdfca6ff5, type: 2}
+    Outcome: You get up and go for a morning run
+    EndsGame: 0
+    HealthChange: 1
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Hungry
+    Scores:
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
+    Outcome: "You\u2019re always hungry these days"
+    EndsGame: 0
+    HealthChange: 0
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Snooze
+    Scores:
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
+    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
+    Outcome: You hit the snooze, but eventually have to get up
+    EndsGame: 0
+    HealthChange: 0
+  DarkChoices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Sleep In
+    Scores: []
+    PlotToApply: {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
+    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
+    Outcome: You fall back asleep, and wake up much later
+    EndsGame: 0
+    HealthChange: -1
+  Background: {fileID: 0}

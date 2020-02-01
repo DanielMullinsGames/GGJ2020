@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
+  m_Name: Episode_Breakfast
+  m_EditorClassIdentifier: 
+  PotentialDescriptions:
+  - Criteria:
+      RequiredPlotPoints:
+      - {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
+      BlockingPlotPoints: []
+    Text: "You\u2019re behind on repairs, and now late, so you just grab some cereal.
+      On the way out, your ex comes out of her room"
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: "You\u2019re behind on repairs, so you just grab some cereal. On the way
+      out, your ex comes out of her room"
+  Choices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Ask About Day
+    Scores:
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 11400000, guid: 162c3e040820dcd44b75c44cac0fa282, type: 2}
+    NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
+    Outcome: She talks about her plans. For a second it is like old times
+    EndsGame: 0
+    HealthChange: 1
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Ignore Her
+    Scores:
+    - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
+    Outcome: You slip past her without looking
+    EndsGame: 0
+    HealthChange: 0
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Apologize
+    Scores:
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+      Score: 1
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
+    Outcome: "You utter \u201CI\u2019m \u2026\u201D, she turns away from you"
+    EndsGame: 0
+    HealthChange: 0
+  DarkChoices:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Sarcasm
+    Scores: []
+    PlotToApply: {fileID: 0}
+    NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
+    Outcome: "\u201DLookin great this morning\u201D you snarkily say as you leave"
+    EndsGame: 0
+    HealthChange: -1
+  Background: {fileID: 0}
