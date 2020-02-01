@@ -72,6 +72,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Guilt
       objectReference: {fileID: 0}
+    - target: {fileID: 5880416314722469546, guid: 95bc5720ce4528049aaa785cb7141196,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048385397185806686, guid: 95bc5720ce4528049aaa785cb7141196,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95bc5720ce4528049aaa785cb7141196, type: 3}
 --- !u!4 &949688412486600579 stripped
@@ -146,6 +156,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CharacterAnimationController_Guilt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798497937336551517, guid: 1f5492d4d35dee94283db2998a07b9b2,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f5492d4d35dee94283db2998a07b9b2, type: 3}

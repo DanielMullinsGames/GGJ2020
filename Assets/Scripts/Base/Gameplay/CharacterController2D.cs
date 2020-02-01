@@ -12,6 +12,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
     [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
+    [SerializeField] private Transform m_ShoveCheck;
+    [SerializeField] private float ShoveForce;
 
     [SerializeField]
     private float k_GroundedRadius = .01f; // Radius of the overlap circle to determine if grounded
@@ -61,7 +63,7 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
-    public void Move(float move, bool jump)
+    public void Move(float move, bool jump, bool shove)
     {
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
@@ -93,6 +95,20 @@ public class CharacterController2D : MonoBehaviour
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             animController.Jump();
+        }
+
+        if (shove)
+        {
+            // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
+            // This can be done using layers instead but Sample Assets will not overwrite your project settings.
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(m_ShoveCheck.position, k_GroundedRadius);
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                if (colliders[i].gameObject != gameObject && colliders[i].gameObject.GetComponent<CharacterController2D>())
+                {
+                    colliders[i].gameObject.GetComponent<Rigidbody2D>().AddForce((colliders[i].gameObject.transform.position - transform.position).normalized * ShoveForce, ForceMode2D.Impulse);
+                }
+            }
         }
     }
 

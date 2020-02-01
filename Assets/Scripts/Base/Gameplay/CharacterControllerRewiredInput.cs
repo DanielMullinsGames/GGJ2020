@@ -14,6 +14,7 @@ public class CharacterControllerRewiredInput : MonoBehaviour
     private CharacterController2D controller;
     private bool jumping;
     private bool interacting;
+    private bool shoving;
     private List<PlayerControlInputHandler> InputHandlers = new List<PlayerControlInputHandler>(); 
 
     void Start()
@@ -40,12 +41,13 @@ public class CharacterControllerRewiredInput : MonoBehaviour
         interactVector.y = player.GetAxis("Interact_Vertical");
         jumping = player.GetButtonDown("Submit");
         interacting = player.GetButtonDown("Interact");
+        shoving = player.GetButtonDown("Cancel");
     }
 
     private void ProcessInput()
     {
         // Process movement
-        controller.Move(moveVector.x, jumping);
+        controller.Move(moveVector.x, jumping, shoving || interacting);
 
         foreach (var inputHandler in InputHandlers)
             inputHandler.SendInput(interactVector, interacting);
