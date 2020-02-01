@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d288a5be72e4b4faf42c960ef50ab2, type: 3}
   m_Name: Motivation_Lethargy
   m_EditorClassIdentifier: 
-  PlayableObject: {fileID: 3655627082681238009, guid: 95bc5720ce4528049aaa785cb7141196,
+  PlayableObject: {fileID: 3563483388089444612, guid: 7e644818d553d21498d6ef5d2c581d0b,
     type: 3}
-  Color: {r: 1, g: 0, b: 0, a: 1}
+  Color: {r: 0.35686275, g: 0.76470596, b: 0.8941177, a: 1}
   Name: Lethargy

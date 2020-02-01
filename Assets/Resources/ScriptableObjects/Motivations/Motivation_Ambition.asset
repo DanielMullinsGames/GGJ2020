@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d288a5be72e4b4faf42c960ef50ab2, type: 3}
   m_Name: Motivation_Ambition
   m_EditorClassIdentifier: 
-  PlayableObject: {fileID: 3655627082681238009, guid: 95bc5720ce4528049aaa785cb7141196,
+  PlayableObject: {fileID: 9192155169926388404, guid: 1adf006e2711ad64baf36c8d39a90c74,
     type: 3}
-  Color: {r: 1, g: 0, b: 0, a: 1}
+  Color: {r: 0.9843138, g: 0.6666667, b: 0.30588236, a: 1}
   Name: Ambition
