@@ -46,6 +46,11 @@ public class GunHandler : MonoBehaviour
         Center.transform.localRotation = Quaternion.Euler(0f, 0f, mCurrentAngle);
     }
 
+    public void TriggerFire()
+    {
+        Fire();
+    }
+
     private void Fire()
     {
         mCurrentReload = ReloadTime;

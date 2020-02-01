@@ -9,6 +9,6 @@ public class EpisodeChoiceSpawnPoint : MonoBehaviour
     {
         GameObject bubble = GameObject.Instantiate(GameConfig.Instance.EpisodeBubblePrefab, transform.position, GameConfig.Instance.EpisodeBubblePrefab.transform.rotation);
         bubble.GetComponent<EpisodeChoiceBubble>().SetChoice(choice);
-        bubble.GetComponent<Rigidbody2D>().velocity = m_VelocityToSet;
+        bubble.GetComponent<EpisodeChoiceBubble>().SetTargetVelocity(m_VelocityToSet);
     }
 }

@@ -9,6 +9,8 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
     public EpisodeChoice Choice;
     public TextMeshPro Text;
 
+    private Vector2 vel;
+
     public void OnPointerClick(PointerEventData eventData)
     {
         GameStateManager.Instance.SelectChoice(Choice);
@@ -23,6 +25,16 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
     public void SelectChoice()
     {
         GameStateManager.Instance.SelectChoice(Choice);
+    }
+
+    private void Update()
+    {
+        GetComponent<Rigidbody2D>().velocity = vel;
+    }
+
+    public void SetTargetVelocity(Vector2 velToUse)
+    {
+        vel = velToUse;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
