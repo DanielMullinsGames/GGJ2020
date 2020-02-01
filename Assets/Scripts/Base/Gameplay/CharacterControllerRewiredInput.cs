@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using Rewired;
+using System;
 
 public class CharacterControllerRewiredInput : MonoBehaviour
 {
@@ -9,8 +10,11 @@ public class CharacterControllerRewiredInput : MonoBehaviour
 
     private Player player; // The Rewired Player
     private Vector3 moveVector;
+    private Vector3 interactVector;
     private CharacterController2D controller;
     private bool jumping;
+    private bool interacting;
+    private List<PlayerControlInputHandler> InputHandlers = new List<PlayerControlInputHandler>(); 
 
     void Start()
     {
@@ -32,12 +36,28 @@ public class CharacterControllerRewiredInput : MonoBehaviour
 
         moveVector.x = player.GetAxis("Horizontal"); // get input by name or action id
         moveVector.y = player.GetAxis("Vertical");
+        interactVector.x = player.GetAxis("Interact_Horizontal"); // get input by name or action id
+        interactVector.y = player.GetAxis("Interact_Vertical");
         jumping = player.GetButtonDown("Submit");
+        interacting = player.GetButtonDown("Interact");
     }
 
     private void ProcessInput()
     {
         // Process movement
         controller.Move(moveVector.x, jumping);
+
+        foreach (var inputHandler in InputHandlers)
+            inputHandler.SendInput(interactVector, interacting);
+    }
+
+    public void AddInputHandler(PlayerControlInputHandler inputTarget)
+    {
+        InputHandlers.Add(inputTarget);
+    }
+
+    public void RemoveInputHandler(PlayerControlInputHandler inputTarget)
+    {
+        InputHandlers.Remove(inputTarget);
     }
 }
