@@ -8,6 +8,19 @@ public class CharacterAnimationController : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    public void GetShoved()
+    {
+        Tween.LocalScale(transform, new Vector2(1f, 0.5f), 0.05f, 0f, Tween.EaseOut);
+        Tween.LocalScale(transform, Vector2.one, 0.3f, 0.05f, Tween.EaseSpring);
+    }
+
+    public void Shove()
+    {
+        animator.SetTrigger("push");
+        Tween.LocalScale(transform, new Vector2(1f, 0.7f), 0.05f, 0.05f, Tween.EaseOut);
+        Tween.LocalScale(transform, Vector2.one, 0.3f, 0.1f, Tween.EaseSpring);
+    }
+
     public void SetRunning(bool running)
     {
         animator.SetBool("running", running);

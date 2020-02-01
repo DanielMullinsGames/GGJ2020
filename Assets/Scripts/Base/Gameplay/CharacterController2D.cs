@@ -99,6 +99,7 @@ public class CharacterController2D : MonoBehaviour
 
         if (shove)
         {
+            animController.Shove();
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_ShoveCheck.position, k_GroundedRadius);
@@ -107,6 +108,7 @@ public class CharacterController2D : MonoBehaviour
                 if (colliders[i].gameObject != gameObject && colliders[i].gameObject.GetComponent<CharacterController2D>())
                 {
                     colliders[i].gameObject.GetComponent<Rigidbody2D>().AddForce((colliders[i].gameObject.transform.position - transform.position).normalized * ShoveForce, ForceMode2D.Impulse);
+                    colliders[i].gameObject.GetComponentInChildren<CharacterAnimationController>().GetShoved();
                 }
             }
         }
