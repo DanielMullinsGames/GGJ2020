@@ -12,6 +12,7 @@ public class GameStateManager : MonoBehaviour
     public bool Resolving;
     public Episode CurrentEpisode;
     public GameObject GameOverScreen;
+    public GameObject LoseScreen;
 
     private void Awake()
     {
@@ -71,10 +72,16 @@ public class GameStateManager : MonoBehaviour
 
         EpisodeManager.Instance.DisplayResolveEpisode(episode, choice);
         MotivationManager.Instance.ResolveChoice(choice);
+        HealthManager.Instance.ChangeHealth(choice.HealthChange);
+
+        if (choice.PlotToApply != null)
+            PlotManager.Instance.TriggerPlot(choice.PlotToApply);
 
         yield return new WaitForSeconds(2f);
 
-        if (choice.EndsGame)
+        if (HealthManager.Instance.Health <= 0)
+            StartCoroutine(LoseGame());
+        else if (choice.EndsGame)
             StartCoroutine(FinishGame());
         else
             StartCoroutine(EnterEpisode(choice.NextScene));
@@ -83,6 +90,13 @@ public class GameStateManager : MonoBehaviour
     private IEnumerator FinishGame()
     {
         GameOverScreen.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(1);
+    }
+
+    private IEnumerator LoseGame()
+    {
+        LoseScreen.SetActive(true);
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(1);
     }

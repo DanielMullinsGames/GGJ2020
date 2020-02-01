@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_2
   m_EditorClassIdentifier: 
-  Description: This is the second episode
+  PotentialDescriptions:
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: This is the first choic
   Choices:
-  - Text: Only one choice here
+  - Criteria:
+      RequiredPlotPoints: []
+      BlockingPlotPoints: []
+    Text: Only one choice here
     Scores: []
+    PlotToApply: {fileID: 0}
     NextScene: {fileID: 0}
     Outcome: Smart choice
     EndsGame: 1
+    HealthChange: 0
+  DarkChoices: []
   Background: {fileID: 0}
