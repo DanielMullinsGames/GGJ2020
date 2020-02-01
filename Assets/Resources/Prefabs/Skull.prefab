@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -834989189
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: -2889576869840193054, guid: 19bf2806539c638438e8daabab5aa059,
     type: 3}
@@ -82,6 +82,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &598100452388053042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3087022292731198495}
+  - component: {fileID: 7554056072928449370}
+  m_Layer: 0
+  m_Name: GremlinSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3087022292731198495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598100452388053042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: 0.187, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8267516731532348636}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7554056072928449370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598100452388053042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd71467e9c72c634a913fc0156d40873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
+    type: 3}
+  MinTime: 2
+  MaxTime: 6
 --- !u!1 &1100490911764228118
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +383,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1087853867
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 100
   m_Sprite: {fileID: 7396683859651262336, guid: 19bf2806539c638438e8daabab5aa059,
     type: 3}
@@ -418,7 +465,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -834989189
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -20
   m_Sprite: {fileID: 2952702220779325343, guid: 19bf2806539c638438e8daabab5aa059,
     type: 3}
@@ -468,6 +515,7 @@ Transform:
   - {fileID: 3582758581516546716}
   - {fileID: 2929148580524257743}
   - {fileID: 2673040483490275156}
+  - {fileID: 3087022292731198495}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
