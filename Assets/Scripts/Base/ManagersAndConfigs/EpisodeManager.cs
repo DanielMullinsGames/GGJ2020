@@ -9,7 +9,6 @@ public class EpisodeManager : MonoBehaviour
     public static EpisodeManager Instance;
 
     public TextMeshPro EpisodeTextArea;
-    public List<Transform> EpisodeChoiceLocations;
 
     private List<GameObject> mChoices = new List<GameObject>();
 
@@ -30,27 +29,12 @@ public class EpisodeManager : MonoBehaviour
 
     public void DisplayResolveEpisode(Episode episode, EpisodeChoice choice)
     {
-        foreach (var existing in mChoices)
-            Destroy(existing);
-
-        mChoices.Clear();
-
         EpisodeTextArea.text = choice.Outcome;
     }
 
     public void DisplayPlayingEpisode(Episode episode)
     {
         //EpisodeTextArea.text = "";
-        DisplayChoices(episode);
     }
 
-    private void DisplayChoices(Episode episode)
-    {
-        for (int i = 0; i < episode.Choices.Count; i++)
-        {
-            GameObject choiceObj = Instantiate(GameConfig.Instance.EpisodeBubblePrefab, EpisodeChoiceLocations[i]);
-            choiceObj.GetComponent<EpisodeChoiceBubble>().SetChoice(episode.Choices[i]);
-            mChoices.Add(choiceObj);
-        }
-    }
 }
