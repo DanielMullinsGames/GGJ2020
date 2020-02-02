@@ -37,7 +37,7 @@ public class RestartGameUI : MonoBehaviour
             mCurrentTime += Time.deltaTime;
 
             if (mCurrentTime > TimeToRestart)
-                SceneManager.LoadScene(0);
+                GameStateManager.Instance.ChangingScene = true;
         }
         else if (mCurrentTime > 0f)
         {
