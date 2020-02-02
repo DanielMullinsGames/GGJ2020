@@ -16,7 +16,7 @@ public class SequentialText : MonoBehaviour
     private Color currentColor = Color.black;
     private bool skipToEnd;
 
-    private const float DEFAULT_FREQUENCY = 9f;
+    private const float DEFAULT_FREQUENCY = 6f;
 
     [SerializeField]
     private Color defaultColor = Color.black;

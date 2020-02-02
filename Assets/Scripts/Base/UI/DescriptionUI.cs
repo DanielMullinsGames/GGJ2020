@@ -10,6 +10,9 @@ public class DescriptionUI : MonoBehaviour
     [SerializeField]
     private SequentialText sequentialText;
 
+    [SerializeField]
+    private GameObject shadow;
+
     private int currentCoroutines;
 
     private void Start()
@@ -20,6 +23,8 @@ public class DescriptionUI : MonoBehaviour
 
     public void PlayMessage(string message)
     {
+        shadow.gameObject.SetActive(!string.IsNullOrEmpty(message));
+
         if (sequentialText.PlayingMessage)
         {
             sequentialText.SkipToEnd();
@@ -29,7 +34,7 @@ public class DescriptionUI : MonoBehaviour
         CustomCoroutine.WaitOnConditionThenExecute(() => !sequentialText.PlayingMessage, () =>
         {
             currentCoroutines--;
-            sequentialText.PlayMessage(message);
+            sequentialText.PlayMessage(message.ToUpper());
         });
     }
 

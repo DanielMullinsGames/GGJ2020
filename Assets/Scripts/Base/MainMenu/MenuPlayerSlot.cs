@@ -3,6 +3,7 @@ using System.Collections;
 using Rewired;
 using UnityEngine.SceneManagement;
 using System;
+using Pixelplacement;
 
 public class MenuPlayerSlot : MonoBehaviour
 {
@@ -22,8 +23,8 @@ public class MenuPlayerSlot : MonoBehaviour
     {
         player = ReInput.players.GetPlayer(m_PlayerNum);
         PlayerManager.SetActivePlayers = true;
-        GameObject spawned = GameObject.Instantiate(MotivationManager.Instance.MotivationScores[m_PlayerNum].Type.MenuPrefab, PlayerSpriteAnchor);
-        spawned.transform.localPosition = Vector3.zero;
+        //GameObject spawned = GameObject.Instantiate(MotivationManager.Instance.MotivationScores[m_PlayerNum].Type.MenuPrefab, PlayerSpriteAnchor);
+        //spawned.transform.localPosition = new Vector2(1.5f, 0f);
 
         UpdateAppearance();
     }
@@ -47,6 +48,18 @@ public class MenuPlayerSlot : MonoBehaviour
         submitting = player.GetButtonDown("Submit");
         starting = player.GetButtonDown("Start");
         cancelling = player.GetButtonDown("Cancel");
+
+        if (submitting)
+        {
+            Bounce();
+        }
+    }
+
+    private void Bounce()
+    {
+        OnObject.transform.localPosition = Vector3.zero;
+        Tween.LocalPosition(OnObject.transform, new Vector2(0f, 0.1f), 0.05f, 0f, Tween.EaseInOut);
+        Tween.LocalPosition(OnObject.transform, new Vector2(0f, 0f), 0.2f, 0.1f, Tween.EaseSpring);
     }
 
     private void ProcessInput()
