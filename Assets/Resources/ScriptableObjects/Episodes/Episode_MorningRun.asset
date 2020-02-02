@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_MorningRun
   m_EditorClassIdentifier: 
-  BackgroundPrefab: {fileID: 0}
+  BackgroundPrefab: {fileID: 16915867481608598, guid: 2e46d938782a2a34fa1d7664da5dd4f6,
+    type: 3}
+  EpisodeDecorators: []
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints: []

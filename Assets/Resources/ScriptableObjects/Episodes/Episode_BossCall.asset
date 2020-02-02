@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_BossCall
   m_EditorClassIdentifier: 
-  BackgroundPrefab: {fileID: 0}
+  BackgroundPrefab: {fileID: 1105204218489914869, guid: a4716b4971ec0454283917e0b47e3cc9,
+    type: 3}
+  EpisodeDecorators:
+  - {fileID: 8479197743814778262, guid: c53f0b6aaa2d5db478604df44af3fdf8, type: 3}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
