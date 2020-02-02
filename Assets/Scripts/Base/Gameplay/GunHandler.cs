@@ -12,6 +12,7 @@ public class GunHandler : MonoBehaviour
     public Transform FirePoint;
     public Transform Center;
     public ParticleSystem FireParticles;
+    public AudioSource ButtonPressedSound;
 
     private float mCurrentAngle;
     private PlayerControlInputHandler mInputHandler;
@@ -64,6 +65,8 @@ public class GunHandler : MonoBehaviour
 
     private void Fire()
     {
+        ButtonPressedSound.Play();
+
         mCurrentReload = ReloadTime;
         GameObject fireObj = GameObject.Instantiate(BulletPrefab, FirePoint.transform.position, BulletPrefab.transform.rotation);
         Vector3 direction = FirePoint.transform.position - Center.transform.position;

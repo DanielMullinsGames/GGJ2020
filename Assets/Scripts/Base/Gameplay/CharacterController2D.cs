@@ -19,9 +19,12 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private float mShoveStunDuration;
     [SerializeField] private AudioSource JumpSound;
     [SerializeField] private AudioSource LandSound;
+    public AudioSource StunSound;
 
     [SerializeField]
     private float k_GroundedRadius = .01f; // Radius of the overlap circle to determine if grounded
+    [SerializeField]
+    private float k_ShoveRadius = .01f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
@@ -54,6 +57,14 @@ public class CharacterController2D : MonoBehaviour
     private void OnDestroy()
     {
         Characters.Remove(this);
+    }
+
+    private void Update()
+    {
+        if (mStunLeft > 0 && !StunSound.isPlaying)
+            StunSound.Play();
+        else if (mStunLeft <= 0f && StunSound.isPlaying)
+            StunSound.Stop();
     }
 
     private void FixedUpdate()
@@ -130,7 +141,7 @@ public class CharacterController2D : MonoBehaviour
             animController.Shove();
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(m_ShoveCheck.position, k_GroundedRadius);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(m_ShoveCheck.position, k_ShoveRadius);
             for (int i = 0; i < colliders.Length; i++)
             {
                 if (colliders[i].gameObject != gameObject && colliders[i].gameObject.GetComponent<CharacterController2D>())

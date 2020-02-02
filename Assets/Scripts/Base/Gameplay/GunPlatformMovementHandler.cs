@@ -10,6 +10,8 @@ public class GunPlatformMovementHandler : MonoBehaviour
     public Vector3 StartingLine;
     public LayerMask EdgeLineMask;
     public float StartingAngle;
+    public AudioSource ButtonPressedSound;
+    public AudioSource MovedSound;
 
     private bool mMovingRight;
     private bool mMovingLeft;
@@ -56,11 +58,15 @@ public class GunPlatformMovementHandler : MonoBehaviour
 
     public void SetMovingRight()
     {
+        ButtonPressedSound.Play();
+        MovedSound.Play();
         mMovingRight = true;
     }
 
     public void SetMovingLeft()
     {
+        ButtonPressedSound.Play();
+        MovedSound.Play();
         mMovingLeft = true;
     }
 
