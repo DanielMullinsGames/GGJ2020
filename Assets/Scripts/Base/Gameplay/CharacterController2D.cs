@@ -160,7 +160,7 @@ public class CharacterController2D : MonoBehaviour
     public void ShoveStun()
     {
         mStunLeft = Mathf.Max(mShoveStunDuration, mStunLeft);
-        mStunLeft = mStunDuration;
+        mStunLeft = mShoveStunDuration;
         animController.SetShocked(true);
     }
 }
