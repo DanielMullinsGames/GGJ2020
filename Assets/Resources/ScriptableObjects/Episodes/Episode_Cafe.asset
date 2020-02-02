@@ -21,11 +21,11 @@ MonoBehaviour:
       - {fileID: 11400000, guid: 2e69520192e67414fbf074835f86ed66, type: 2}
       BlockingPlotPoints: []
     Text: "You get to the cafe for your morning coffee and snack. You\u2019re hungry
-      from the run"
+      from the run."
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: You get to the cafe for your morning coffee and snack
+    Text: You get to the cafe for your morning coffee and snack.
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -53,7 +53,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: af2841825773256469134ec600b7b362, type: 2}
-    Outcome: You get the fanciest option. You deserve it
+    Outcome: You get the fanciest option. You deserve it.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -65,17 +65,17 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: af2841825773256469134ec600b7b362, type: 2}
-    Outcome: You get what you always get
+    Outcome: You get what you always get.
     EndsGame: 0
     HealthChange: 1
   DarkChoices:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: Drink
+    Text: Get Drunk
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
-    Outcome: You skip the coffee, and go to the liquor store instead
+    Outcome: You skip the coffee, and go to the liquor store instead.
     EndsGame: 0
     HealthChange: -2

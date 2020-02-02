@@ -20,11 +20,11 @@ MonoBehaviour:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: 0973e1e55c10a844b8360dc7c3078c05, type: 2}
       BlockingPlotPoints: []
-    Text: It is time to pay. You gave your spare change to the homeless man
+    Text: It is time to pay. You gave your spare change to the homeless man.
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: It is time to pay the waiter
+    Text: It is time to pay the waiter.
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -37,7 +37,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
-    Outcome: Hopefully he appreciates it
+    Outcome: Hopefully he appreciates it.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -52,7 +52,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
-    Outcome: You leave your spare change
+    Outcome: You leave your spare change.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -64,7 +64,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
-    Outcome: You leave nothing
+    Outcome: You leave nothing.
     EndsGame: 0
     HealthChange: 0
   DarkChoices:
@@ -75,6 +75,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
-    Outcome: You leave while he's distracted
+    Outcome: You leave while he's distracted.
     EndsGame: 0
     HealthChange: -1

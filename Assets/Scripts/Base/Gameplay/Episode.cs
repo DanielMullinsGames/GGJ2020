@@ -86,6 +86,7 @@ public class EpisodeChoice
     public List<MotivationScore> Scores;
     public Plot PlotToApply;
     public Episode NextScene;
+    [TextArea]
     public string Outcome;
     public bool EndsGame;
     public int HealthChange;

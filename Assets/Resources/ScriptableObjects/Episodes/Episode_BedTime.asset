@@ -30,7 +30,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Today is done, you plan for tomorrow
+    Outcome: Today is done, you plan for tomorrow.
     EndsGame: 1
     HealthChange: 0
   - Criteria:
@@ -42,7 +42,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: You worry you didn't do a good job
+    Outcome: You worry you didn't do a good job.
     EndsGame: 1
     HealthChange: 0
   - Criteria:
@@ -54,7 +54,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Time to browse the internet
+    Outcome: Time to browse the internet.
     EndsGame: 1
     HealthChange: 0
   - Criteria:
@@ -66,7 +66,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: Time to sleep
+    Outcome: Time to sleep.
     EndsGame: 1
     HealthChange: 0
   DarkChoices: []

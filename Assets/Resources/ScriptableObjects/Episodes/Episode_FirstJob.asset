@@ -21,11 +21,11 @@ MonoBehaviour:
       - {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
       BlockingPlotPoints: []
     Text: "Your first customer is furious. You didn\u2019t show yesterday, and now
-      you\u2019re late"
+      you\u2019re late."
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: "Your first customer is angry. You didn\u2019t show yesterday"
+    Text: "Your first customer is angry. You didn\u2019t show yesterday."
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -38,7 +38,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 11400000, guid: 75dcddeca1a968d4993ae8bf19f442f5, type: 2}
     NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
-    Outcome: He seems to believe you, and calms down
+    Outcome: He seems to believe you, and calms down.
     EndsGame: 0
     HealthChange: 1
   - Criteria:
@@ -52,7 +52,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
-    Outcome: You give some platitudes. He stays upset while you work
+    Outcome: You give some platitudes. He stays upset while you work.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -66,7 +66,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 11400000, guid: 75dcddeca1a968d4993ae8bf19f442f5, type: 2}
     NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
-    Outcome: You make jokes while you work, cheering him up
+    Outcome: You make jokes while you work, cheering him up.
     EndsGame: 0
     HealthChange: 1
   DarkChoices:
@@ -77,6 +77,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
-    Outcome: You snap back at him. He leaves you alone for the rest of the job
+    Outcome: You snap back at him. He leaves you alone for the rest of the job.
     EndsGame: 0
     HealthChange: -1

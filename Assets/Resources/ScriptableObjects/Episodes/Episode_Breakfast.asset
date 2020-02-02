@@ -22,12 +22,12 @@ MonoBehaviour:
       - {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
       BlockingPlotPoints: []
     Text: "You\u2019re behind on repairs, and now late. On the way out, your ex comes
-      out of your old  room"
+      out of your old  room."
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
     Text: "You\u2019re behind on repairs. On the way out, your ex comes out of your
-      old  room"
+      old  room."
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -40,7 +40,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 11400000, guid: 162c3e040820dcd44b75c44cac0fa282, type: 2}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: She talks about her plans. For a second it is like old times
+    Outcome: She talks about her plans. For a second it is like old times.
     EndsGame: 0
     HealthChange: 1
   - Criteria:
@@ -54,7 +54,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: You slip past her without looking
+    Outcome: You slip past her without looking.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -68,7 +68,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: You try and stutter out an apology as she turns away
+    Outcome: You try and stutter out an apology as she turns away.
     EndsGame: 0
     HealthChange: 0
   DarkChoices:
@@ -79,6 +79,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: You make a snarky comment as you slip out the door
+    Outcome: You make a snarky comment as you slip out the door.
     EndsGame: 0
     HealthChange: -1

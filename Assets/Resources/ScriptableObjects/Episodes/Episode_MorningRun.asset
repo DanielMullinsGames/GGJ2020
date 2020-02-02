@@ -32,7 +32,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 11400000, guid: 0973e1e55c10a844b8360dc7c3078c05, type: 2}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: "You grab him breakfast. He\u2019s really appreciative"
+    Outcome: "You grab him breakfast. He\u2019s really appreciative."
     EndsGame: 0
     HealthChange: 1
   - Criteria:
@@ -46,7 +46,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: You turn around and head home
+    Outcome: You turn around and head home.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -60,7 +60,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: "You pretend he doesn\u2019t exist"
+    Outcome: "You pretend he doesn\u2019t exist."
     EndsGame: 0
     HealthChange: 0
   DarkChoices:
@@ -71,6 +71,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: You visibly recoil from his appearance
+    Outcome: You visibly recoil from his appearance.
     EndsGame: 0
     HealthChange: -1
