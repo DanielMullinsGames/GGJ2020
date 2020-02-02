@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1991646141651673956, guid: 95bc5720ce4528049aaa785cb7141196,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.72
+      objectReference: {fileID: 0}
     - target: {fileID: 3655627082681238002, guid: 95bc5720ce4528049aaa785cb7141196,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,6 +76,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player_Lethargy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880416314722469546, guid: 95bc5720ce4528049aaa785cb7141196,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300706618331786922, guid: 95bc5720ce4528049aaa785cb7141196,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464540127807881931, guid: 95bc5720ce4528049aaa785cb7141196,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564065574238913747, guid: 95bc5720ce4528049aaa785cb7141196,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95bc5720ce4528049aaa785cb7141196, type: 3}
