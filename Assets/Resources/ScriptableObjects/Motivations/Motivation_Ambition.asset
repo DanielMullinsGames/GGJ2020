@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayableObject: {fileID: 9192155169926388404, guid: 1adf006e2711ad64baf36c8d39a90c74,
     type: 3}
+  MenuPrefab: {fileID: 7430430723358507342, guid: 54aee991b41c1b249952db106c158ef6,
+    type: 3}
   Color: {r: 1, g: 0.5605028, b: 0.06132078, a: 1}
   Name: Ambition

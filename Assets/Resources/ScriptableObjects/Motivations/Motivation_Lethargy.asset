@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayableObject: {fileID: 3563483388089444612, guid: 7e644818d553d21498d6ef5d2c581d0b,
     type: 3}
+  MenuPrefab: {fileID: 7505941489504271191, guid: d563ba31dc636a04f8a0e4e6f52babcd,
+    type: 3}
   Color: {r: 0.35686275, g: 0.76470596, b: 0.8941177, a: 1}
   Name: Lethargy

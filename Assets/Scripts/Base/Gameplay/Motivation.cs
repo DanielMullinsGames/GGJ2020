@@ -4,6 +4,7 @@ using System.Collections;
 public class Motivation : ScriptableObject
 {
     public GameObject PlayableObject;
+    public GameObject MenuPrefab;
     public Color Color;
     public string Name;
 }
