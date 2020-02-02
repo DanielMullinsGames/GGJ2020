@@ -17,6 +17,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private float ShoveForce;
     [SerializeField] private float mStunDuration;
     [SerializeField] private float mShoveStunDuration;
+    [SerializeField] private AudioSource JumpSound;
+    [SerializeField] private AudioSource LandSound;
 
     [SerializeField]
     private float k_GroundedRadius = .01f; // Radius of the overlap circle to determine if grounded
@@ -77,6 +79,7 @@ public class CharacterController2D : MonoBehaviour
                 {
                     OnLandEvent.Invoke();
                     animController.Land();
+                    LandSound.Play();
                 }
             }
         }
@@ -119,6 +122,7 @@ public class CharacterController2D : MonoBehaviour
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             animController.Jump();
+            JumpSound.Play();
         }
 
         if (shove)
