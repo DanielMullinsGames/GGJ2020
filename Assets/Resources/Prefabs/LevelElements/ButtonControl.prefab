@@ -517,3 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7bf7278ff67824d930469c761b815c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRendererToChange: {fileID: 7545670223096454418}
+  activeSprite: {fileID: 5551957760813471792, guid: 19bf2806539c638438e8daabab5aa059,
+    type: 3}
+  staticSprite: {fileID: 1996787558950350990, guid: 19bf2806539c638438e8daabab5aa059,
+    type: 3}
