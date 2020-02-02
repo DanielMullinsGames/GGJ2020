@@ -18,6 +18,11 @@ public class GameStateManager : MonoBehaviour
     public float TimeUntilTimeOut;
     public ScoreUI ScoreUI;
 
+    [SerializeField] private EpisodeChoice episodeToTrigger;
+    [SerializeField] private bool TriggerEpisodeToTrigger;
+    [SerializeField] private Plot plotToTrigger;
+    [SerializeField] private bool TriggerPlotToTrigger;
+
     private TimeOutController toController;
 
     private void Awake()
@@ -36,6 +41,20 @@ public class GameStateManager : MonoBehaviour
         Instance = null;
     }
 
+    private void Update()
+    {
+        if (TriggerPlotToTrigger)
+            PlotManager.Instance.TriggerPlot(plotToTrigger);
+
+        TriggerPlotToTrigger = false;
+
+        if (TriggerEpisodeToTrigger && Playing)
+        {
+            SelectChoice(episodeToTrigger);
+            TriggerEpisodeToTrigger = false;
+        }
+    }
+
     public void StartGame()
     {
         StartCoroutine(EnterEpisode(GameConfig.Instance.StartingEpisode));
@@ -50,6 +69,16 @@ public class GameStateManager : MonoBehaviour
         toController.CancelTimeOut();
         Playing = false;
         StartCoroutine(ResolveChoiceBubble(bubble));
+    }
+
+    public void SelectChoice(EpisodeChoice choice)
+    {
+        if (!Playing)
+            return;
+
+        toController.CancelTimeOut();
+        Playing = false;
+        StartCoroutine(ResolveEpisode(CurrentEpisode, choice));
     }
 
     private IEnumerator EnterEpisode(Episode episode)
@@ -136,7 +165,9 @@ public class GameStateManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         EpisodeManager.Instance.DisplayResolveEpisode(episode, choice);
-        HealthManager.Instance.ChangeHealth(choice.HealthChange);
+
+        while (EpisodeManager.Instance.ShowingMessage)
+            yield return null;
 
         if (choice.PlotToApply != null)
             PlotManager.Instance.TriggerPlot(choice.PlotToApply);
@@ -144,6 +175,8 @@ public class GameStateManager : MonoBehaviour
 
         while (EpisodeManager.Instance.ShowingMessage)
             yield return null;
+
+        HealthManager.Instance.ChangeHealth(choice.HealthChange);
 
         yield return new WaitForSeconds(1f);
 
