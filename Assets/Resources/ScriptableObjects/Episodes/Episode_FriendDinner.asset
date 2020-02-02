@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_FriendDinner
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: You head over to your friends place, for dinner and a board game. It is
-      fun, but he asks about your head
+    Text: You go to dinner with your friend. They asks about your head
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -40,7 +40,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: You portray yourself as a victim, to gain his sympathy
+    Outcome: You portray yourself as a victim, to gain their sympathy
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -54,7 +54,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: "It hurts, but you let her know how you\u2019ve been feeling lately"
+    Outcome: "It hurts, but you let them know how you\u2019ve been feeling lately"
     EndsGame: 0
     HealthChange: 2
   DarkChoices:
@@ -68,4 +68,3 @@ MonoBehaviour:
     Outcome: You go on a long rant about how the world is against you
     EndsGame: 0
     HealthChange: -1
-  Background: {fileID: 0}

@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_ExText
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: 162c3e040820dcd44b75c44cac0fa282, type: 2}
       BlockingPlotPoints: []
-    Text: Your ex texts you, asking for you to bring home dinner. It seems happier
-      then as of late. But you have plans with a friend
+    Text: Your ex texts you, asking for you to bring home dinner. It seems positive.
+      But you have plans with a friend
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
@@ -74,4 +75,3 @@ MonoBehaviour:
     Outcome: You say you have a hot date tonight
     EndsGame: 0
     HealthChange: -1
-  Background: {fileID: 0}

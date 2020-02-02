@@ -43,7 +43,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: "You\u2019re always hungry these days"
+    Outcome: "First breakfast. You\u2019re always hungry these days"
     EndsGame: 0
     HealthChange: 0
   - Criteria:

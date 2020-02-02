@@ -18,13 +18,13 @@ MonoBehaviour:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
       BlockingPlotPoints: []
-    Text: "You\u2019re behind on repairs, and now late, so you just grab some cereal.
-      On the way out, your ex comes out of her room"
+    Text: "You\u2019re behind on repairs, and now late. On the way out, your ex comes
+      out of your old  room"
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: "You\u2019re behind on repairs, so you just grab some cereal. On the way
-      out, your ex comes out of her room"
+    Text: "You\u2019re behind on repairs. On the way out, your ex comes out of your
+      old  room"
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -61,7 +61,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: You try and stutter out an apology as she turns away from you
+    Outcome: You try and stutter out an apology as she turns away
     EndsGame: 0
     HealthChange: 0
   DarkChoices:

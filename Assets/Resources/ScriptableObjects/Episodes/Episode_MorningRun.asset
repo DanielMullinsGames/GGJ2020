@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_MorningRun
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: "You get out the door and start jogging. Soon you see a homeless man ahead
-      of you. He\u2019s a sad sight"
+    Text: During the jog you see a sad looking homeless man ahead of you
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -68,4 +68,3 @@ MonoBehaviour:
     Outcome: You visibly recoil from his appearance
     EndsGame: 0
     HealthChange: -1
-  Background: {fileID: 0}
