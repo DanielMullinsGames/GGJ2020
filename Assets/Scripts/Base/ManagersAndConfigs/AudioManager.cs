@@ -29,10 +29,38 @@ public class AudioManager : MonoBehaviour
 
     internal void SetMusic(AudioClip audioClip)
     {
-        if (audioClip != null && mMusicPlayer.clip != audioClip)
+        if (audioClip != null)
         {
-            mMusicPlayer.clip = audioClip;
-            mMusicPlayer.Play();
+            StartCoroutine(TransitionToClip(audioClip));
+        }
+    }
+
+    private IEnumerator TransitionToClip(AudioClip audioClip)
+    {
+        if (mMusicPlayer.clip != audioClip)
+        {
+            yield return FadeOut();
+        }
+        mMusicPlayer.clip = audioClip;
+        mMusicPlayer.Play();
+        yield return FadeIn();
+    }
+
+    private IEnumerator FadeOut()
+    {
+        while (mMusicPlayer.volume > 0f)
+        {
+            mMusicPlayer.volume -= Time.deltaTime * 2f;
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private IEnumerator FadeIn()
+    {
+        while (mMusicPlayer.volume < 1f)
+        {
+            mMusicPlayer.volume += Time.deltaTime * 2f;
+            yield return new WaitForEndOfFrame();
         }
     }
 
