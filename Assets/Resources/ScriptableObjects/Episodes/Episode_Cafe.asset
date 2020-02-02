@@ -74,4 +74,4 @@ MonoBehaviour:
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
     Outcome: You skip the coffee, and go to the liquor store instead
     EndsGame: 0
-    HealthChange: -1
+    HealthChange: -2
