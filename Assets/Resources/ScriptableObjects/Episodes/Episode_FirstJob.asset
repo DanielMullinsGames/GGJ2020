@@ -32,6 +32,8 @@ MonoBehaviour:
     Scores:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
     PlotToApply: {fileID: 11400000, guid: 75dcddeca1a968d4993ae8bf19f442f5, type: 2}
     NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
     Outcome: He seems to believe you, and calms down
@@ -57,6 +59,8 @@ MonoBehaviour:
     Text: Crack Joke
     Scores:
     - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
     PlotToApply: {fileID: 11400000, guid: 75dcddeca1a968d4993ae8bf19f442f5, type: 2}
     NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}

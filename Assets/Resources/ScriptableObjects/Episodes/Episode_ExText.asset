@@ -45,6 +45,8 @@ MonoBehaviour:
       BlockingPlotPoints: []
     Text: Skip
     Scores:
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
     - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
