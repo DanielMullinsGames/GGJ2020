@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_BossCall
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: 75dcddeca1a968d4993ae8bf19f442f5, type: 2}
       BlockingPlotPoints: []
-    Text: "Your boss calls you between jobs. She\u2019s upset about your slow progress
-      lately"
+    Text: "Your boss calls between jobs. She\u2019s upset about your slow progress"
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: "Your boss calls you between jobs. She\u2019s upset about your slow progress
-      lately, and your last customer called in a complaint"
+    Text: "Your boss calls between jobs. She\u2019s is mad because of a complaint
+      about you"
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -34,7 +34,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 9303889a9075f164c9eaf7f1bb843228, type: 2}
-    Outcome: "You swear you\u2019ll do better, bringing up recent events as justification"
+    Outcome: "You swear you\u2019ll do better, it's been rough lately"
     EndsGame: 0
     HealthChange: 1
   - Criteria:
@@ -60,8 +60,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 9303889a9075f164c9eaf7f1bb843228, type: 2}
-    Outcome: You apologize for your recent behaviour, bringing up recent events to
-      explain
+    Outcome: You apologize for your recent behaviour, it's been rough lately
     EndsGame: 0
     HealthChange: 0
   DarkChoices:
@@ -75,4 +74,3 @@ MonoBehaviour:
     Outcome: You pretend you're going through a tunnel and hang up
     EndsGame: 0
     HealthChange: -1
-  Background: {fileID: 0}

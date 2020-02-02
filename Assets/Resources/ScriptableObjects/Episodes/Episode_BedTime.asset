@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_BedTime
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: As you settle down on your couch, you think about your day
+    Text: As you go to bed, you think...
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -51,7 +52,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: You stay up looking at your phone
+    Outcome: Time to browse the internet
     EndsGame: 1
     HealthChange: 0
   - Criteria:
@@ -63,8 +64,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: You're tired, and pass out immediately
+    Outcome: Time to sleep
     EndsGame: 1
     HealthChange: 0
   DarkChoices: []
-  Background: {fileID: 0}

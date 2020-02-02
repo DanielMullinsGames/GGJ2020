@@ -12,22 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_Cafe
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: 2e69520192e67414fbf074835f86ed66, type: 2}
       BlockingPlotPoints: []
     Text: "You get to the cafe for your morning coffee and snack. You\u2019re hungry
-      from the run, and want to grab breakfast as well. What do you get?"
+      from the run"
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: You get to the cafe for your morning coffee and snack. What do you get?
+    Text: You get to the cafe for your morning coffee and snack
   Choices:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: Cheap
+    Text: Buy Cheap
     Scores:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
@@ -40,7 +41,7 @@ MonoBehaviour:
       RequiredPlotPoints: []
       BlockingPlotPoints:
       - {fileID: 11400000, guid: 0973e1e55c10a844b8360dc7c3078c05, type: 2}
-    Text: Expensive
+    Text: Buy Expensive
     Scores:
     - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
       Score: 1
@@ -54,7 +55,7 @@ MonoBehaviour:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: Regular
+    Text: Buy Regular
     Scores:
     - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
       Score: 1
@@ -71,7 +72,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
-    Outcome: You skip the coffee, and go to the liquor store next door
+    Outcome: You skip the coffee, and go to the liquor store instead
     EndsGame: 0
-    HealthChange: -1
-  Background: {fileID: 0}
+    HealthChange: -2

@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_FirstJob
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
       BlockingPlotPoints: []
-    Text: "When you arrive, your first customer is furious. You didn\u2019t show
-      yesterday, and now you\u2019re late. He demands to know why"
+    Text: "Your first customer is furious. You didn\u2019t show yesterday, and now
+      you\u2019re late"
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: "When you arrive, your first customer is angry. You didn\u2019t show yesterday,
-      and he demands to know why"
+    Text: "Your first customer is angry. You didn\u2019t show yesterday"
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -74,4 +74,3 @@ MonoBehaviour:
     Outcome: You snap back at him. He leaves you alone for the rest of the job
     EndsGame: 0
     HealthChange: -1
-  Background: {fileID: 0}

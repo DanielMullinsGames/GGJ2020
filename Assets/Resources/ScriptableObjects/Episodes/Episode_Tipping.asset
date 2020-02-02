@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_Tipping
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: 0973e1e55c10a844b8360dc7c3078c05, type: 2}
       BlockingPlotPoints: []
-    Text: You finish up, and it is time It is time to pay the waiter. You gave your
-      spare change away already to the homeless man
+    Text: It is time to pay. You gave your spare change to the homeless man
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: You finish up, and it is time It is time to tip the waitress
+    Text: It is time to pay the waiter
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -35,7 +35,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
-    Outcome: Hopefully she appreciates it
+    Outcome: Hopefully he appreciates it
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -71,7 +71,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}
-    Outcome: You leave while she's distracted
+    Outcome: You leave while he's distracted
     EndsGame: 0
     HealthChange: -1
-  Background: {fileID: 0}
