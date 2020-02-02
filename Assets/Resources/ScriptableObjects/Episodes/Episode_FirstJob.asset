@@ -52,7 +52,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 684204eedf89a4e4096967dab2371162, type: 2}
-    Outcome: You give some platitudes. He stays upset while you work.
+    Outcome: You make excuses. He stays upset while you work.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
