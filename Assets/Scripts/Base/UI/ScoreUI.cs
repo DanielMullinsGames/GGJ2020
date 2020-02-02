@@ -11,11 +11,15 @@ public class ScoreUI : MonoBehaviour
     [SerializeField]
     private List<Motivation> testMotivations = new List<Motivation>();
 
+    public AudioSource SoundToPlay;
+
     public void ShowScoreForMotivation(Motivation motivation, int score)
     {
         var bar = scoreBars.Find(x => x.gameObject.name.ToLower().Contains(motivation.Name.ToLower()));
 
         bar.UpdateScore(score);
+
+        SoundToPlay.Play();
     }
 
 #if UNITY_EDITOR

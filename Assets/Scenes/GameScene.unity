@@ -1978,6 +1978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RestartingUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7740939003092569543, guid: bc31ba4a69a97eb4f8ef45fe40cf5b33,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc31ba4a69a97eb4f8ef45fe40cf5b33, type: 3}
 --- !u!1001 &1764997663769688011

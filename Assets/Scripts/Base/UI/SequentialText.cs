@@ -8,6 +8,9 @@ public class SequentialText : MonoBehaviour
 
     public bool PlayingMessage { get; private set; }
     public bool EndOfVisibleCharacters { get; private set; }
+    public AudioSource SoundPerText;
+    public float MinPitch;
+    public float MaxPitch;
 
     private TMPro.TextMeshPro textMesh;
 
@@ -118,6 +121,7 @@ public class SequentialText : MonoBehaviour
             else
             {
                 CharacterShown?.Invoke();
+                PlaySound();
             }
             shown += message[index];
             if (message == shown)
@@ -140,6 +144,14 @@ public class SequentialText : MonoBehaviour
             }
         }
         PlayingMessage = false;
+    }
+
+    private void PlaySound()
+    {
+        GameObject sound = Instantiate(SoundPerText.gameObject, null);
+        sound.AddComponent<DestroyAfterDelay>().Lifetime = 1f;
+        sound.GetComponent<AudioSource>().pitch = UnityEngine.Random.Range(MinPitch, MaxPitch);
+        sound.GetComponent<AudioSource>().Play();
     }
 
     public static string ColorString(string str, Color c)

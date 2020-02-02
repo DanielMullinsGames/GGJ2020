@@ -36,6 +36,7 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
     private Color brainyTextColor;
 
     public AudioSource GoodTriggerSound;
+    public AudioSource BadTriggerSound;
 
     private bool isSelectedChoice;
 
@@ -92,6 +93,8 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
 
         if (!IsDark)
             GoodTriggerSound.Play();
+        else
+            BadTriggerSound.Play();
 
         GameStateManager.Instance.SelectChoice(this);
     }
