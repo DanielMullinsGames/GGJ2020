@@ -26,6 +26,11 @@ public class CharacterAnimationController : MonoBehaviour
         animator.SetBool("running", running);
     }
 
+    public void SetShocked(bool shocked)
+    {
+        animator.SetBool("shocked", shocked);
+    }
+
     public void Jump()
     {
         Tween.LocalScale(transform, new Vector2(1f, 0.7f), 0.05f, 0f, Tween.EaseOut);
@@ -53,6 +58,14 @@ public class CharacterAnimationController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.L))
             {
                 Land();
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                SetShocked(true);
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                SetShocked(false);
             }
         }
     }
