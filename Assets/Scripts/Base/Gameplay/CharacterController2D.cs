@@ -56,7 +56,12 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (mStunLeft > 0f && mStunLeft - Time.fixedDeltaTime < 0f)
+        {
+            animController.SetShocked(false);
+        }
         mStunLeft -= Time.fixedDeltaTime;
+
         bool wasGrounded = m_Grounded;
         m_Grounded = false;
 
@@ -149,10 +154,13 @@ public class CharacterController2D : MonoBehaviour
     public void Stun()
     {
         mStunLeft = Mathf.Max(mStunDuration, mStunLeft);
+        animController.SetShocked(true);
     }
 
     public void ShoveStun()
     {
         mStunLeft = Mathf.Max(mShoveStunDuration, mStunLeft);
+        mStunLeft = mStunDuration;
+        animController.SetShocked(true);
     }
 }
