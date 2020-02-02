@@ -41,6 +41,18 @@ TextureImporter:
   - first:
       213: -2889576869840193054
     second: head_sheet_12
+  - first:
+      213: 1133504233326661881
+    second: head_sheet_13
+  - first:
+      213: -7091307145765612354
+    second: head_sheet_14
+  - first:
+      213: 5285192365835207677
+    second: head_sheet_15
+  - first:
+      213: -6165463614750771072
+    second: head_sheet_16
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -385,7 +397,7 @@ TextureImporter:
         width: 270
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,6 +405,90 @@ TextureImporter:
       bones: []
       spriteID: 2e97df1852926e7d0800000000000000
       internalID: -2889576869840193054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 284
+        width: 81
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f056da38140bbf00800000000000000
+      internalID: 1133504233326661881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 355
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb49377e8bd969d90800000000000000
+      internalID: -7091307145765612354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 352
+        width: 51
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3c63f5476c85940800000000000000
+      internalID: 5285192365835207677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 336
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0883f27228fdf6aa0800000000000000
+      internalID: -6165463614750771072
       vertices: []
       indices: 
       edges: []
