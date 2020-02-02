@@ -289,12 +289,12 @@ PrefabInstance:
     - target: {fileID: 2199330310196399095, guid: fdd7326d8a023ca499823ac4b7e647cc,
         type: 3}
       propertyPath: MinPitch
-      value: -3
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2199330310196399095, guid: fdd7326d8a023ca499823ac4b7e647cc,
         type: 3}
       propertyPath: MaxPitch
-      value: 3
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 2199330310196399095, guid: fdd7326d8a023ca499823ac4b7e647cc,
         type: 3}
