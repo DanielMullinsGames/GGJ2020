@@ -24,6 +24,15 @@ public class MotivationManager : MonoBehaviour
             AddScore(score);
     }
 
+    public int GetScore(Motivation motivation)
+    {
+        foreach (var entry in MotivationScores)
+            if (entry.Type == motivation)
+                return (int)entry.Score;
+
+        return 0;
+    }
+
     private void AddScore(MotivationScore score)
     {
         foreach (var entry in MotivationScores)

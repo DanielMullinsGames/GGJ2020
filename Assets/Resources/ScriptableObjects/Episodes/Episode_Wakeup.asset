@@ -24,10 +24,18 @@ MonoBehaviour:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
     Text: Wake Up
-    Scores: []
+    Scores:
+    - Type: {fileID: 11400000, guid: 20f4c79ea2d1c354da7de1b41dfa1f3a, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
+      Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: e14949217e2016e4e83e4be9de70f0b0, type: 2}
-    Outcome: ...
+    Outcome: ............
     EndsGame: 0
     HealthChange: 0
   DarkChoices: []

@@ -8,4 +8,10 @@ public class Bullet : MonoBehaviour
     {
         GameObject.Destroy(gameObject);
     }
+
+    private void Update()
+    {
+        if (!GameStateManager.Instance.Playing)
+            Destroy(gameObject);
+    }
 }

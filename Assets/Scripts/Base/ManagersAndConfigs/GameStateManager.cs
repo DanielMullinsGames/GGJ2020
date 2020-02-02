@@ -15,6 +15,7 @@ public class GameStateManager : MonoBehaviour
     public GameObject GameOverScreen;
     public GameObject LoseScreen;
     public float TimeUntilTimeOut;
+    public ScoreUI ScoreUI;
 
     private TimeOutController toController;
 
@@ -57,7 +58,11 @@ public class GameStateManager : MonoBehaviour
 
         yield return EpisodeManager.Instance.StartCoroutine(EpisodeManager.Instance.TransitionScreen(episode));
         EpisodeManager.Instance.DisplayEnterEpisode(episode);
-        yield return new WaitForSeconds(2f);
+
+        while (EpisodeManager.Instance.ShowingMessage)
+            yield return null;
+
+        yield return new WaitForSeconds(1f);
 
         Entering = false;
         StartCoroutine(PlayEpisode(episode));
@@ -90,6 +95,10 @@ public class GameStateManager : MonoBehaviour
     {
         Playing = false;
         EpisodeManager.Instance.DisplayFailedToChoose(timeOutChoice);
+
+        while (EpisodeManager.Instance.ShowingMessage)
+            yield return null;
+
         yield return new WaitForSeconds(1f);
         toController.CancelTimeOut();
         StartCoroutine(ResolveEpisode(CurrentEpisode, timeOutChoice));
@@ -106,7 +115,19 @@ public class GameStateManager : MonoBehaviour
         if (choice.PlotToApply != null)
             PlotManager.Instance.TriggerPlot(choice.PlotToApply);
 
-        yield return new WaitForSeconds(2f);
+
+        while (EpisodeManager.Instance.ShowingMessage)
+            yield return null;
+
+        yield return new WaitForSeconds(1f);
+
+        if (choice.Scores.Count > 0)
+        {
+            foreach (var motivationScore in choice.Scores)
+                ScoreUI.ShowScoreForMotivation(motivationScore.Type, MotivationManager.Instance.GetScore(motivationScore.Type));
+                    
+            yield return new WaitForSeconds(2f);
+        }
 
         if (HealthManager.Instance.Health <= 0)
             StartCoroutine(LoseGame());

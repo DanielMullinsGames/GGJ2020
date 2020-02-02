@@ -11,6 +11,7 @@ public class EpisodeManager : MonoBehaviour
     public static EpisodeManager Instance;
 
     public DescriptionUI DescriptionUI;
+    public bool ShowingMessage { get { return DescriptionUI.DIsplayingMessage; } }
 
     private List<GameObject> mChoices = new List<GameObject>();
     private GameObject mCurrentBackground;

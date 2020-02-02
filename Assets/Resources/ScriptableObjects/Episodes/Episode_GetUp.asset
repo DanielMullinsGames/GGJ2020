@@ -18,8 +18,7 @@ MonoBehaviour:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: You wake up on the couch in the living room. My ex, now my roommate, has
-      the bedroom
+    Text: You wake up on the couch in your  living room
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -56,7 +55,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: You hit the snooze, but eventually have to get up
+    Outcome: You hit the snooze for a little longer
     EndsGame: 0
     HealthChange: 0
   DarkChoices:
@@ -66,7 +65,7 @@ MonoBehaviour:
     Text: Sleep In
     Scores: []
     PlotToApply: {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
-    NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: You fall back asleep, and wake up much later
+    NextScene: {fileID: 11400000, guid: 1262652333cc1664ca3abe75c86fcfe6, type: 2}
+    Outcome: You fall back asleep
     EndsGame: 0
     HealthChange: -1

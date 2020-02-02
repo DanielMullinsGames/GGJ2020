@@ -5,8 +5,12 @@ using Pixelplacement;
 
 public class DescriptionUI : MonoBehaviour
 {
+    public bool DIsplayingMessage { get { return sequentialText.PlayingMessage || currentCoroutines > 0; } }
+
     [SerializeField]
     private SequentialText sequentialText;
+
+    private int currentCoroutines;
 
     private void Start()
     {
@@ -21,8 +25,10 @@ public class DescriptionUI : MonoBehaviour
             sequentialText.SkipToEnd();
         }
 
+        currentCoroutines++;
         CustomCoroutine.WaitOnConditionThenExecute(() => !sequentialText.PlayingMessage, () =>
         {
+            currentCoroutines--;
             sequentialText.PlayMessage(message);
         });
     }
