@@ -10,6 +10,8 @@ public class HealthBarUI : MonoBehaviour
     [SerializeField]
     private TMPro.TextMeshPro shadow;
 
+    public AudioSource HealthSound;
+
     private int health;
 
     private void Awake()
@@ -24,6 +26,7 @@ public class HealthBarUI : MonoBehaviour
             this.health = health;
             gameObject.SetActive(true);
             GetComponent<Animator>().Play("show_health", 0, 0f);
+            HealthSound.Play();
         }
         else
         {
