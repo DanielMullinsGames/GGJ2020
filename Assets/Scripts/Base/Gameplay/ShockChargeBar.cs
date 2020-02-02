@@ -26,9 +26,14 @@ public class ShockChargeBar : MonoBehaviour
     private float chargeDuration = 10f;
 
     private float timer;
+    private float mMaxBarScale;
 
-    private const float MAX_BAR_SCALE = 2.3f;
     private bool mSpent;
+
+    private void Awake()
+    {
+        mMaxBarScale = bar.localScale.x;
+    }
 
     public void OnShockButtonPressed()
     {
@@ -60,7 +65,7 @@ public class ShockChargeBar : MonoBehaviour
             timer = 0f;
         }
 
-        bar.localScale = new Vector2(Mathf.Min(MAX_BAR_SCALE, (timer / chargeDuration) * MAX_BAR_SCALE), bar.localScale.y);
+        bar.localScale = new Vector2(Mathf.Min(mMaxBarScale, (timer / chargeDuration) * mMaxBarScale), bar.localScale.y);
 
         if (timer > chargeDuration)
         {

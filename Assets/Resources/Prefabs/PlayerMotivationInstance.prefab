@@ -58,9 +58,10 @@ MonoBehaviour:
     m_Bits: 7424
   m_GroundCheck: {fileID: 3655627083019108985}
   m_ShoveCheck: {fileID: 5880416314722469546}
-  ShoveForce: 16
+  ShoveForce: 24
   mStunDuration: 2
-  k_GroundedRadius: 0.2
+  mShoveStunDuration: 0.5
+  k_GroundedRadius: 0.1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []

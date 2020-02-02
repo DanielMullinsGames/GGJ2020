@@ -16,6 +16,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Transform m_ShoveCheck;
     [SerializeField] private float ShoveForce;
     [SerializeField] private float mStunDuration;
+    [SerializeField] private float mShoveStunDuration;
 
     [SerializeField]
     private float k_GroundedRadius = .01f; // Radius of the overlap circle to determine if grounded
@@ -127,6 +128,7 @@ public class CharacterController2D : MonoBehaviour
                 {
                     colliders[i].gameObject.GetComponent<Rigidbody2D>().AddForce((colliders[i].gameObject.transform.position - transform.position).normalized * ShoveForce, ForceMode2D.Impulse);
                     colliders[i].gameObject.GetComponentInChildren<CharacterAnimationController>().GetShoved();
+                    colliders[i].gameObject.GetComponentInChildren<CharacterController2D>().ShoveStun();
                 }
             }
         }
@@ -146,6 +148,11 @@ public class CharacterController2D : MonoBehaviour
 
     public void Stun()
     {
-        mStunLeft = mStunDuration;
+        mStunLeft = Mathf.Max(mStunDuration, mStunLeft);
+    }
+
+    public void ShoveStun()
+    {
+        mStunLeft = Mathf.Max(mShoveStunDuration, mStunLeft);
     }
 }

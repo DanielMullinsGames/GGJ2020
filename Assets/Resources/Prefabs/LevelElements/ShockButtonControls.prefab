@@ -279,6 +279,11 @@ PrefabInstance:
       propertyPath: buttonRigidbody
       value: 
       objectReference: {fileID: 3042804376021745984}
+    - target: {fileID: 8055053932409737450, guid: b8ba646067ea4cd47a84818d96cfc31e,
+        type: 3}
+      propertyPath: chargeDuration
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8ba646067ea4cd47a84818d96cfc31e, type: 3}
 --- !u!4 &4795679821754397961 stripped
