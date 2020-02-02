@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_Cafe
   m_EditorClassIdentifier: 
-  BackgroundPrefab: {fileID: 0}
+  BackgroundPrefab: {fileID: 3201419914353818640, guid: 81837704a6edd644291b3fcc7de76d20,
+    type: 3}
+  EpisodeDecorators: []
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_BedTime
   m_EditorClassIdentifier: 
-  BackgroundPrefab: {fileID: 0}
+  BackgroundPrefab: {fileID: 2834886695107946001, guid: 63519db98224def4ba30dbf90329a496,
+    type: 3}
+  EpisodeDecorators: []
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints: []
