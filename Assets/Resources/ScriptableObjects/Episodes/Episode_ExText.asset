@@ -21,12 +21,12 @@ MonoBehaviour:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: 162c3e040820dcd44b75c44cac0fa282, type: 2}
       BlockingPlotPoints: []
-    Text: Your ex texts you, asking for you to bring home dinner. It seems positive.
+    Text: Your ex calls you, asking for you to bring home dinner. She seems positive.
       But you have plans with a friend
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: Your ex texts you, asking for you to bring home dinner. But you have plans
+    Text: Your ex calls you, asking for you to bring home dinner. But you have plans
       with a friend
   Choices:
   - Criteria:
