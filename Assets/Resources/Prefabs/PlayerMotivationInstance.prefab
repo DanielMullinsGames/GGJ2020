@@ -193,6 +193,7 @@ MonoBehaviour:
   JumpSound: {fileID: 1991646141651673956}
   LandSound: {fileID: 7564065574238913747}
   k_GroundedRadius: 0.05
+  k_ShoveRadius: 0.2
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
