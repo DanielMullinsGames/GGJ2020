@@ -13,12 +13,8 @@ MonoBehaviour:
   m_Name: Episode_Breakfast
   m_EditorClassIdentifier: 
   BackgroundPrefab: {fileID: 0}
-<<<<<<< HEAD
   EpisodeDecorators:
   - {fileID: 6853781972599056112, guid: cb1e4f04074b5314dad1912290913505, type: 3}
-=======
-  EpisodeDecorators: []
->>>>>>> master
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
@@ -38,6 +34,8 @@ MonoBehaviour:
     Text: Ask About Day
     Scores:
     - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
     PlotToApply: {fileID: 11400000, guid: 162c3e040820dcd44b75c44cac0fa282, type: 2}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
@@ -64,6 +62,8 @@ MonoBehaviour:
     Text: Apologize
     Scores:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+      Score: 1
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
