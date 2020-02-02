@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_ExDinner
   m_EditorClassIdentifier: 
+  BackgroundPrefab: {fileID: 0}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
@@ -46,6 +47,8 @@ MonoBehaviour:
     Scores:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
+    - Type: {fileID: 11400000, guid: 425d587afebbe214abd553938355c736, type: 2}
+      Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
     Outcome: "It hurts, but you let her know how you\u2019ve been feeling lately"
@@ -62,4 +65,3 @@ MonoBehaviour:
     Outcome: You tell her it is her fault, ruining the night
     EndsGame: 0
     HealthChange: -2
-  Background: {fileID: 0}

@@ -60,7 +60,7 @@ MonoBehaviour:
       BlockingPlotPoints: []
     Text: Pass Out
     Scores:
-    - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
+    - Type: {fileID: 11400000, guid: 3086ebdc1757a4c49908865f24aa64d9, type: 2}
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
