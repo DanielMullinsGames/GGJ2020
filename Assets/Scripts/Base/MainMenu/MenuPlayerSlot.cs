@@ -17,7 +17,8 @@ public class MenuPlayerSlot : MonoBehaviour
     private bool submitting;
     private bool cancelling;
     private bool starting;
- 
+
+    public GameObject fadeOut;
 
     void Start()
     {
@@ -71,6 +72,9 @@ public class MenuPlayerSlot : MonoBehaviour
             PlayerManager.ActivePlayers[m_PlayerNum] = false;
 
         if (starting && PlayerManager.ActivePlayers[m_PlayerNum] && PlayerManager.HasEnoughPlayers())
-            SceneManager.LoadScene(2);
+        {
+            CustomCoroutine.WaitThenExecute(0.25f, () => SceneManager.LoadScene(2));
+            fadeOut.SetActive(true);
+        }
     }
 }
