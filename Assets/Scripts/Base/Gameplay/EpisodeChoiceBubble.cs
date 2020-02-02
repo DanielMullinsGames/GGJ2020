@@ -16,6 +16,12 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
 
     private Vector2 vel;
 
+    [SerializeField]
+    private SpriteRenderer leftGlow;
+
+    [SerializeField]
+    private SpriteRenderer rightGlow;
+
     private void Awake()
     {
         CurrentBubbles.Add(this);
@@ -37,6 +43,27 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
 
         foreach(var text in Texts)
             text.text = Choice.Text;
+
+        ShowColors(choice);
+    }
+
+    private void ShowColors(EpisodeChoice choice)
+    {
+        if (choice.Scores.Count == 1)
+        {
+            leftGlow.enabled = rightGlow.enabled = true;
+            leftGlow.color = rightGlow.color = choice.Scores[0].Type.Color;
+        }
+        else if (choice.Scores.Count == 2)
+        {
+            leftGlow.enabled = rightGlow.enabled = true;
+            leftGlow.color = choice.Scores[0].Type.Color;
+            rightGlow.color = choice.Scores[1].Type.Color;
+        }
+        else
+        {
+            leftGlow.enabled = rightGlow.enabled = false;
+        }
     }
 
     public void SelectChoice()

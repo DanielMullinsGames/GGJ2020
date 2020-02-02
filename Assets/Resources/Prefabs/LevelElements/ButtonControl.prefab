@@ -635,3 +635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderToIgnore: {fileID: 7545670223096454419}
+  spriteRendererToChange: {fileID: 7545670223096454418}
+  activeSprite: {fileID: 5551957760813471792, guid: 19bf2806539c638438e8daabab5aa059,
+    type: 3}
+  staticSprite: {fileID: 1996787558950350990, guid: 19bf2806539c638438e8daabab5aa059,
+    type: 3}

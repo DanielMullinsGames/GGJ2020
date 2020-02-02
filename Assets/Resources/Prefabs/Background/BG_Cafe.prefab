@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3201419914353818654}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BG_Cafe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4068107010294015748}
   - component: {fileID: 4068107010294015749}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Background_Jog
   m_TagString: Untagged
   m_Icon: {fileID: 0}

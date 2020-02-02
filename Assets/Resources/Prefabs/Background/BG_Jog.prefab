@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16915866866262717}
   - component: {fileID: 16915866866262716}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Background_Jog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 16915867481608593}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BG_Jog
   m_TagString: Untagged
   m_Icon: {fileID: 0}

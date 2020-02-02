@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayableObject: {fileID: 9192155169926388404, guid: 1adf006e2711ad64baf36c8d39a90c74,
     type: 3}
-  Color: {r: 0.9843138, g: 0.6666667, b: 0.30588236, a: 1}
+  Color: {r: 1, g: 0.5605028, b: 0.06132078, a: 1}
   Name: Ambition
