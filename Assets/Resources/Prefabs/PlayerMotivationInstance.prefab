@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 0
   m_Speed: 2
-  m_JumpForce: 400
+  m_JumpForce: 550
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -58,7 +58,7 @@ MonoBehaviour:
     m_Bits: 7424
   m_GroundCheck: {fileID: 3655627083019108985}
   m_ShoveCheck: {fileID: 5880416314722469546}
-  ShoveForce: 8
+  ShoveForce: 16
   k_GroundedRadius: 0.2
   OnLandEvent:
     m_PersistentCalls:
@@ -89,11 +89,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3.8
-  m_Material: {fileID: 6200000, guid: c9e6c05debd8de544a872470f85cdcb3, type: 2}
+  m_GravityScale: 2
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
