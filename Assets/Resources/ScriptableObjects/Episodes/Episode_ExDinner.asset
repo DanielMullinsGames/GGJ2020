@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096f152e66c058f4aad05443b127e73a, type: 3}
   m_Name: Episode_ExDinner
   m_EditorClassIdentifier: 
-  BackgroundPrefab: {fileID: 0}
-  EpisodeDecorators: []
+  BackgroundPrefab: {fileID: 415886832549894450, guid: 84b1850aa7487d249985029621e863da,
+    type: 3}
+  EpisodeDecorators:
+  - {fileID: 7131621962696830898, guid: 2eb8ff0accd0f3947adc21f726baa8c2, type: 3}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
