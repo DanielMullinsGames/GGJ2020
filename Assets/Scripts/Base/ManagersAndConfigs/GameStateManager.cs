@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Pixelplacement;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -41,14 +42,14 @@ public class GameStateManager : MonoBehaviour
         PlayerManager.Instance.SpawnPlayers();
     }
 
-    public void SelectChoice(EpisodeChoice choice)
+    public void SelectChoice(EpisodeChoiceBubble bubble)
     {
         if (!Playing)
             return;
 
         toController.CancelTimeOut();
         Playing = false;
-        StartCoroutine(ResolveEpisode(CurrentEpisode, choice));
+        StartCoroutine(ResolveChoiceBubble(bubble));
     }
 
     private IEnumerator EnterEpisode(Episode episode)
@@ -106,12 +107,35 @@ public class GameStateManager : MonoBehaviour
         StartCoroutine(ResolveEpisode(CurrentEpisode, timeOutChoice));
     }
 
+    private IEnumerator ResolveChoiceBubble(EpisodeChoiceBubble bubble)
+    {
+        bubble.SetBrainy();
+        yield return new WaitForSeconds(1f);
+
+        Tween.Position(bubble.transform, new Vector2(0f, 1.3f), 0.5f, 0f, Tween.EaseInOut);
+        yield return new WaitForSeconds(1f);
+
+        MotivationManager.Instance.ResolveChoice(bubble.Choice);
+        if (bubble.Choice.Scores.Count > 0)
+        {
+            foreach (var motivationScore in bubble.Choice.Scores)
+                ScoreUI.ShowScoreForMotivation(motivationScore.Type, MotivationManager.Instance.GetScore(motivationScore.Type));
+
+            yield return new WaitForSeconds(2.5f);
+        }
+
+        yield return new WaitForSeconds(1f);
+        bubble.CleanUp();
+
+        StartCoroutine(ResolveEpisode(CurrentEpisode, bubble.Choice));
+    }
+
     private IEnumerator ResolveEpisode(Episode episode, EpisodeChoice choice)
     {
         Resolving = true;
+        yield return new WaitForSeconds(1f);
 
         EpisodeManager.Instance.DisplayResolveEpisode(episode, choice);
-        MotivationManager.Instance.ResolveChoice(choice);
         HealthManager.Instance.ChangeHealth(choice.HealthChange);
 
         if (choice.PlotToApply != null)
@@ -122,14 +146,6 @@ public class GameStateManager : MonoBehaviour
             yield return null;
 
         yield return new WaitForSeconds(1f);
-
-        if (choice.Scores.Count > 0)
-        {
-            foreach (var motivationScore in choice.Scores)
-                ScoreUI.ShowScoreForMotivation(motivationScore.Type, MotivationManager.Instance.GetScore(motivationScore.Type));
-                    
-            yield return new WaitForSeconds(2f);
-        }
 
         if (HealthManager.Instance.Health <= 0)
             StartCoroutine(LoseGame());

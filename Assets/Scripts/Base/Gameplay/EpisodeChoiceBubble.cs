@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using Pixelplacement;
 
 public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
 {
@@ -22,6 +23,17 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private SpriteRenderer rightGlow;
 
+    [SerializeField]
+    private SpriteRenderer bubble;
+
+    [SerializeField]
+    private Sprite brainySprite;
+
+    [SerializeField]
+    private Color brainyTextColor;
+
+    private bool isSelectedChoice;
+
     private void Awake()
     {
         CurrentBubbles.Add(this);
@@ -34,7 +46,7 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        GameStateManager.Instance.SelectChoice(Choice);
+        SelectChoice();
     }
 
     public void SetChoice(EpisodeChoice choice)
@@ -68,15 +80,15 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
 
     public void SelectChoice()
     {
-        GameStateManager.Instance.SelectChoice(Choice);
+        GameStateManager.Instance.SelectChoice(this);
     }
 
     private void Update()
     {
         GetComponent<Rigidbody2D>().velocity = vel;
 
-        if (!GameStateManager.Instance.Playing)
-            Destroy(gameObject);
+        if (!GameStateManager.Instance.Playing && !isSelectedChoice)
+            CleanUp();
     }
 
     public void SetTargetVelocity(Vector2 velToUse)
@@ -94,14 +106,37 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
         NormalObject.SetActive(false);
         DarkObject.SetActive(true);
     }
+    
+    public void SetBrainy()
+    {
+        bubble.sprite = brainySprite;
+        bubble.sortingLayerName = "UI";
+        foreach (TextMeshPro text in Texts)
+        {
+            text.sortingLayerID = bubble.sortingLayerID;
+            text.color = brainyTextColor;
+        }
+    }
+
+    public void CleanUp()
+    {
+        enabled = false;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+        Tween.LocalScale(transform, Vector3.zero, 0.2f, 0f, Tween.EaseIn);
+        Destroy(gameObject, 0.2f);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.GetComponent<Bullet>() != null)
         {
             collision.collider.gameObject.GetComponent<Bullet>().TriggerHit();
-            GameStateManager.Instance.SelectChoice(Choice);
-            Destroy(gameObject);
+
+            enabled = false;
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+            SelectChoice();
         }
         if (collision.collider.gameObject.GetComponent<Gremlin>() != null)
         {
