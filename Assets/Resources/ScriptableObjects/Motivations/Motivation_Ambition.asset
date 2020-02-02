@@ -16,5 +16,5 @@ MonoBehaviour:
     type: 3}
   MenuPrefab: {fileID: 7430430723358507342, guid: 54aee991b41c1b249952db106c158ef6,
     type: 3}
-  Color: {r: 1, g: 0.5605028, b: 0.06132078, a: 1}
+  Color: {r: 1, g: 0.5313808, b: 0, a: 1}
   Name: Ambition

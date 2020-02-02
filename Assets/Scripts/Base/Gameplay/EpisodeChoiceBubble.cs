@@ -24,6 +24,9 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
     private SpriteRenderer rightGlow;
 
     [SerializeField]
+    private GameObject allColorGlow;
+
+    [SerializeField]
     private SpriteRenderer bubble;
 
     [SerializeField]
@@ -71,6 +74,10 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
             leftGlow.enabled = rightGlow.enabled = true;
             leftGlow.color = choice.Scores[0].Type.Color;
             rightGlow.color = choice.Scores[1].Type.Color;
+        }
+        else if (choice.Scores.Count == 4)
+        {
+            allColorGlow.gameObject.SetActive(true);
         }
         else
         {

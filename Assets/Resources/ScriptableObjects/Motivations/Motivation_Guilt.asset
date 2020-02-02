@@ -16,5 +16,5 @@ MonoBehaviour:
     type: 3}
   MenuPrefab: {fileID: 8798497936950252526, guid: 1f5492d4d35dee94283db2998a07b9b2,
     type: 3}
-  Color: {r: 0.6117647, g: 0.7490196, b: 0.33333334, a: 1}
+  Color: {r: 0.505518, g: 0.754717, b: 0, a: 1}
   Name: Guilt

@@ -16,5 +16,5 @@ MonoBehaviour:
     type: 3}
   MenuPrefab: {fileID: 7505941489504271191, guid: d563ba31dc636a04f8a0e4e6f52babcd,
     type: 3}
-  Color: {r: 0.35686275, g: 0.76470596, b: 0.8941177, a: 1}
+  Color: {r: 0, g: 0.75912404, b: 1, a: 1}
   Name: Lethargy
