@@ -18,6 +18,7 @@ public class GameStateManager : MonoBehaviour
     public float TimeUntilTimeOut;
     public ScoreUI ScoreUI;
     public bool ChangingScene;
+    public float ExitScreenTime;
 
     [SerializeField] private EpisodeChoice episodeToTrigger;
     [SerializeField] private bool TriggerEpisodeToTrigger;
@@ -56,7 +57,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         if (ChangingScene)
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
     }
 
     public void SelectChoice(EpisodeChoiceBubble bubble)
@@ -198,16 +199,33 @@ public class GameStateManager : MonoBehaviour
 
     private IEnumerator FinishGame()
     {
-        GameOverScreen.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(1);
+        float timePassed = 0f;
+        MotivationManager.Instance.SaveScore();
+        HealthManager.Instance.SaveScore();
+
+        while (timePassed < ExitScreenTime)
+        {
+            timePassed += Time.deltaTime;
+            toController.SetIntensity(timePassed / ExitScreenTime);
+            yield return null;
+        }
+
+        SceneManager.LoadScene(4);
     }
 
     private IEnumerator LoseGame()
     {
-        LoseScreen.SetActive(true);
+        float timePassed = 0f;
+
+        while (timePassed < ExitScreenTime)
+        {
+            timePassed += Time.deltaTime;
+            toController.SetIntensity(timePassed / ExitScreenTime);
+            yield return null;
+        }
+
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 }
 

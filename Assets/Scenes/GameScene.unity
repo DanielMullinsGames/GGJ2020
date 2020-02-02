@@ -314,6 +314,7 @@ MonoBehaviour:
   TimeUntilTimeOut: 30
   ScoreUI: {fileID: 746877067}
   ChangingScene: 0
+  ExitScreenTime: 1
   episodeToTrigger:
     Criteria:
       RequiredPlotPoints: []
