@@ -35,6 +35,8 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private Color brainyTextColor;
 
+    public AudioSource GoodTriggerSound;
+
     private bool isSelectedChoice;
 
     private void Awake()
@@ -87,6 +89,10 @@ public class EpisodeChoiceBubble : MonoBehaviour, IPointerClickHandler
 
     public void SelectChoice()
     {
+
+        if (!IsDark)
+            GoodTriggerSound.Play();
+
         GameStateManager.Instance.SelectChoice(this);
     }
 
