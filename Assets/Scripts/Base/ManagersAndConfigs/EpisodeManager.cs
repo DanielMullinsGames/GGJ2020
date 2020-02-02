@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using Pixelplacement;
+using System;
 
 public class EpisodeManager : MonoBehaviour
 {
@@ -60,5 +61,10 @@ public class EpisodeManager : MonoBehaviour
 
             yield return new WaitForSeconds(TRANSITION_DURATION);
         }
+    }
+
+    public void DisplayFailedToChoose(EpisodeChoice timeOutChoice)
+    {
+        DescriptionUI.PlayMessage(timeOutChoice.Text);
     }
 }
