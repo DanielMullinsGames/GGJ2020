@@ -28,16 +28,25 @@ public class ShockChargeBar : MonoBehaviour
     private float timer;
 
     private const float MAX_BAR_SCALE = 2.3f;
+    private bool mSpent;
 
     public void OnShockButtonPressed()
     {
+        if (mSpent)
+            return;
+
         Shock();
         timer = 0f;
     }
 
+    public void Reset()
+    {
+        mSpent = false;
+    }
+
     private void Shock()
     {
-
+        mSpent = true;
     }
 
     private void Update()

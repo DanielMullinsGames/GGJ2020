@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
     [SerializeField] private Transform m_ShoveCheck;
     [SerializeField] private float ShoveForce;
+    [SerializeField] private float mStunDuration;
 
     [SerializeField]
     private float k_GroundedRadius = .01f; // Radius of the overlap circle to determine if grounded
@@ -21,6 +23,7 @@ public class CharacterController2D : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
+    private float mStunLeft;
 
     [Header("Events")]
     [Space]
@@ -28,6 +31,8 @@ public class CharacterController2D : MonoBehaviour
 
     [SerializeField]
     private CharacterAnimationController animController;
+
+    public static List<CharacterController2D> Characters = new List<CharacterController2D>();
 
     [System.Serializable]
     public class BoolEvent : UnityEvent<bool> { }
@@ -39,10 +44,18 @@ public class CharacterController2D : MonoBehaviour
 
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
+
+        Characters.Add(this);
+    }
+
+    private void OnDestroy()
+    {
+        Characters.Remove(this);
     }
 
     private void FixedUpdate()
     {
+        mStunLeft -= Time.fixedDeltaTime;
         bool wasGrounded = m_Grounded;
         m_Grounded = false;
 
@@ -65,6 +78,11 @@ public class CharacterController2D : MonoBehaviour
 
     public void Move(float move, bool jump, bool shove)
     {
+        if (mStunLeft > 0f)
+        {
+            return;
+        }
+
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
         {
@@ -124,5 +142,10 @@ public class CharacterController2D : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    public void Stun()
+    {
+        mStunLeft = mStunDuration;
     }
 }
