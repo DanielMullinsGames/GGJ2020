@@ -34,6 +34,7 @@ public struct EpisodeText
 public class Episode : ScriptableObject
 {
     public GameObject BackgroundPrefab;
+    public List<GameObject> EpisodeDecorators;
     public List<EpisodeText> PotentialDescriptions;
     public List<EpisodeChoice> Choices;
     public List<EpisodeChoice> DarkChoices;

@@ -14,6 +14,7 @@ public class EpisodeManager : MonoBehaviour
     public bool ShowingMessage { get { return DescriptionUI.DIsplayingMessage; } }
 
     private List<GameObject> mChoices = new List<GameObject>();
+    private List<GameObject> mEpisodeDecorationObjects = new List<GameObject>();
     private GameObject mCurrentBackground;
 
     private const float TRANSITION_DURATION = 1f;
@@ -45,6 +46,8 @@ public class EpisodeManager : MonoBehaviour
 
     public IEnumerator TransitionScreen(Episode next)
     {
+        TearDownOldObjects(mEpisodeDecorationObjects);
+
         if (next.BackgroundPrefab != null && (mCurrentBackground == null || mCurrentBackground.name != next.BackgroundPrefab.name))
         {
             bool firstTransition = mCurrentBackground == null;
@@ -62,6 +65,21 @@ public class EpisodeManager : MonoBehaviour
 
             yield return new WaitForSeconds(TRANSITION_DURATION);
         }
+
+        foreach (var obj in next.EpisodeDecorators)
+        {
+            GameObject spawned = GameObject.Instantiate(obj, obj.transform.position, obj.transform.rotation);
+            mEpisodeDecorationObjects.Add(spawned);
+        }
+    }
+
+    private void TearDownOldObjects(List<GameObject> mEpisodeDecorationObjects)
+    {
+        List<GameObject> toTearDown = new List<GameObject>(mEpisodeDecorationObjects);
+        mEpisodeDecorationObjects.Clear();
+
+        foreach (var gameObj in toTearDown)
+            Destroy(gameObj);
     }
 
     public void DisplayFailedToChoose(EpisodeChoice timeOutChoice)
