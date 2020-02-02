@@ -68,7 +68,7 @@ MonoBehaviour:
   rightGlow: {fileID: 6227365279731975307}
   bubble: {fileID: 7663811845561299781}
   brainySprite: {fileID: 21300000, guid: d98fe5fd95a797c4a89506e453196497, type: 3}
-  brainyTextColor: {r: 0.9333334, g: 0.9568628, b: 0.77647066, a: 1}
+  brainyTextColor: {r: 0.7176471, g: 0.16862746, b: 0.30588236, a: 1}
 --- !u!50 &4776850710292544782
 Rigidbody2D:
   serializedVersion: 4
