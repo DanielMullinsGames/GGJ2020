@@ -22,7 +22,7 @@ MonoBehaviour:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: Buy Lunch
+    Text: Buy Food
     Scores:
     - Type: {fileID: 11400000, guid: 708cdd0af497baa48844de345c0e155d, type: 2}
       Score: 1
@@ -30,7 +30,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 11400000, guid: 0973e1e55c10a844b8360dc7c3078c05, type: 2}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: "I  grab him lunch from a convenience store. He\u2019s really appreciative"
+    Outcome: "You grab him breakfast. He\u2019s really appreciative"
     EndsGame: 0
     HealthChange: 1
   - Criteria:
