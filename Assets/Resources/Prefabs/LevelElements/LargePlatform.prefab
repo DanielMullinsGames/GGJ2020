@@ -17,10 +17,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: LargePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 2523940550939805960, guid: b39d6d31fd62edc4c856644d25136ee0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3625
+      objectReference: {fileID: 0}
     - target: {fileID: 2812676219217232055, guid: b39d6d31fd62edc4c856644d25136ee0,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812676219217232055, guid: b39d6d31fd62edc4c856644d25136ee0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2875
       objectReference: {fileID: 0}
     - target: {fileID: 6978855430320372022, guid: b39d6d31fd62edc4c856644d25136ee0,
         type: 3}
