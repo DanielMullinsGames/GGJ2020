@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3087022292731198495}
   - component: {fileID: 7554056072928449370}
   m_Layer: 0
-  m_Name: GremlinSpawner
+  m_Name: GremlinSpawner2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,11 +107,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598100452388053042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 0.187, z: 0}
+  m_LocalPosition: {x: 0.302, y: -0.004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8267516731532348636}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7554056072928449370
 MonoBehaviour:
@@ -127,8 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
     type: 3}
-  MinTime: 2
-  MaxTime: 6
+  MinTime: 5
+  MaxTime: 20
 --- !u!1 &1100490911764228118
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +205,147 @@ Transform:
   m_Father: {fileID: 8267516731532348636}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2087385213458510705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2872302065386059062}
+  - component: {fileID: 409451065225236780}
+  m_Layer: 0
+  m_Name: GremlinSpawner4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2872302065386059062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087385213458510705}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.154, y: -0.052999973, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8267516731532348636}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409451065225236780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087385213458510705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd71467e9c72c634a913fc0156d40873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
+    type: 3}
+  MinTime: 5
+  MaxTime: 20
+--- !u!1 &2251951236157241943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9082888721486710282}
+  - component: {fileID: 6451462402386726523}
+  m_Layer: 0
+  m_Name: GremlinSpawner3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9082888721486710282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251951236157241943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.244, y: 0.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8267516731532348636}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6451462402386726523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251951236157241943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd71467e9c72c634a913fc0156d40873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
+    type: 3}
+  MinTime: 5
+  MaxTime: 20
+--- !u!1 &2795157803813893807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8213691637931950550}
+  - component: {fileID: 2310889242872299174}
+  m_Layer: 0
+  m_Name: GremlinSpawner5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8213691637931950550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795157803813893807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.28, y: -0.068, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8267516731532348636}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2310889242872299174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795157803813893807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd71467e9c72c634a913fc0156d40873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
+    type: 3}
+  MinTime: 5
+  MaxTime: 20
 --- !u!1 &2845626259280601896
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8109596859325598044
 Transform:
   m_ObjectHideFlags: 0
@@ -337,7 +478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5978028297783018634
 Transform:
   m_ObjectHideFlags: 0
@@ -419,7 +560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2149069034996684211
 Transform:
   m_ObjectHideFlags: 0
@@ -547,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2598762151466720646
 Transform:
   m_ObjectHideFlags: 0
@@ -613,6 +754,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6973665930124261705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4070770574301871935}
+  - component: {fileID: 2341219438897892699}
+  m_Layer: 0
+  m_Name: GremlinSpawner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4070770574301871935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973665930124261705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.14, y: 0.321, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8267516731532348636}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2341219438897892699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973665930124261705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd71467e9c72c634a913fc0156d40873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
+    type: 3}
+  MinTime: 5
+  MaxTime: 20
 --- !u!1 &7733895959533095349
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,7 +1029,7 @@ Transform:
   - {fileID: 2598762151466720646}
   - {fileID: 2149069034996684211}
   m_Father: {fileID: 8267516731532348636}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8267516731532348637
 GameObject:
@@ -853,6 +1041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8267516731532348636}
   - component: {fileID: 8267516731532348635}
+  - component: {fileID: 3247563427536844107}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -879,8 +1068,12 @@ Transform:
   - {fileID: 3582758581516546716}
   - {fileID: 2929148580524257743}
   - {fileID: 2673040483490275156}
-  - {fileID: 3087022292731198495}
   - {fileID: 3169183688612225179}
+  - {fileID: 4070770574301871935}
+  - {fileID: 3087022292731198495}
+  - {fileID: 9082888721486710282}
+  - {fileID: 2872302065386059062}
+  - {fileID: 8213691637931950550}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -899,6 +1092,105 @@ MonoBehaviour:
   m_PossibleSpawns:
   - {fileID: 2868951405866487022}
   - {fileID: 4655694845678047379}
+--- !u!114 &3247563427536844107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267516731532348637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332f758a393bbec48bb755dc7da85d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 3
+  MaxHealth: 6
+  Entries:
+  - Value: 0
+    On:
+    - {fileID: 6973665930124261705}
+    - {fileID: 598100452388053042}
+    - {fileID: 2251951236157241943}
+    - {fileID: 2087385213458510705}
+    - {fileID: 2795157803813893807}
+    Off:
+    - {fileID: 3165163475712342175}
+    - {fileID: 3020684761636216634}
+    - {fileID: 5699704895910943345}
+    - {fileID: 5037484736300525891}
+  - Value: 1
+    On:
+    - {fileID: 6973665930124261705}
+    - {fileID: 598100452388053042}
+    - {fileID: 2251951236157241943}
+    - {fileID: 2087385213458510705}
+    - {fileID: 2795157803813893807}
+    Off:
+    - {fileID: 3020684761636216634}
+    - {fileID: 5699704895910943345}
+    - {fileID: 5037484736300525891}
+    - {fileID: 3165163475712342175}
+  - Value: 2
+    On:
+    - {fileID: 3165163475712342175}
+    - {fileID: 598100452388053042}
+    - {fileID: 2251951236157241943}
+    - {fileID: 2087385213458510705}
+    - {fileID: 2795157803813893807}
+    Off:
+    - {fileID: 3020684761636216634}
+    - {fileID: 5699704895910943345}
+    - {fileID: 5037484736300525891}
+    - {fileID: 6973665930124261705}
+  - Value: 3
+    On:
+    - {fileID: 3165163475712342175}
+    - {fileID: 2251951236157241943}
+    - {fileID: 2087385213458510705}
+    - {fileID: 2795157803813893807}
+    Off:
+    - {fileID: 3020684761636216634}
+    - {fileID: 5699704895910943345}
+    - {fileID: 5037484736300525891}
+    - {fileID: 6973665930124261705}
+    - {fileID: 598100452388053042}
+  - Value: 4
+    On:
+    - {fileID: 3165163475712342175}
+    - {fileID: 3020684761636216634}
+    - {fileID: 2087385213458510705}
+    - {fileID: 2795157803813893807}
+    Off:
+    - {fileID: 5699704895910943345}
+    - {fileID: 5037484736300525891}
+    - {fileID: 6973665930124261705}
+    - {fileID: 598100452388053042}
+    - {fileID: 2251951236157241943}
+  - Value: 5
+    On:
+    - {fileID: 3165163475712342175}
+    - {fileID: 3020684761636216634}
+    - {fileID: 5699704895910943345}
+    - {fileID: 2087385213458510705}
+    Off:
+    - {fileID: 5037484736300525891}
+    - {fileID: 6973665930124261705}
+    - {fileID: 598100452388053042}
+    - {fileID: 2251951236157241943}
+    - {fileID: 2795157803813893807}
+  - Value: 6
+    On:
+    - {fileID: 3165163475712342175}
+    - {fileID: 3020684761636216634}
+    - {fileID: 5699704895910943345}
+    - {fileID: 5037484736300525891}
+    - {fileID: 2795157803813893807}
+    Off:
+    - {fileID: 6973665930124261705}
+    - {fileID: 598100452388053042}
+    - {fileID: 2251951236157241943}
+    - {fileID: 2087385213458510705}
 --- !u!1 &8267516731594239891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1325,7 @@ PolygonCollider2D:
       - {x: -1.6798072, y: -1.1880558}
       - {x: -1.5561248, y: -1.793379}
       - {x: -1.4701804, y: -1.8172387}
+      - {x: -1.4977258, y: -1.5658878}
       - {x: -1.6021066, y: -1.1757036}
       - {x: -1.5977567, y: -0.837376}
       - {x: -1.5435632, y: -0.48040593}
@@ -1046,7 +1339,7 @@ PolygonCollider2D:
       - {x: 1.4721467, y: -0.7441641}
       - {x: 1.4213197, y: -1.3428849}
       - {x: 1.277124, y: -1.8027977}
-      - {x: 1.3909018, y: -1.7884046}
+      - {x: 1.3878626, y: -1.7914437}
       - {x: 1.5265896, y: -1.1475853}
       - {x: 1.5266299, y: -0.89147645}
       - {x: 1.5061368, y: -0.73982704}
@@ -1137,7 +1430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8267516732155574757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.629, z: 0}
+  m_LocalPosition: {x: -0.079, y: -1.658, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8267516731745974633}
@@ -1167,7 +1460,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.02, y: 0.23}
+  m_Size: {x: 2.83, y: 0.23}
   m_EdgeRadius: 0
 --- !u!1 &8267516732524886270
 GameObject:
