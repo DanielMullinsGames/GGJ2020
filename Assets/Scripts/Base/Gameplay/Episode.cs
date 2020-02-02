@@ -43,6 +43,25 @@ public class Episode : ScriptableObject
         return EpisodeChoice.GetRandomChoice(Choices);
     }
 
+    public EpisodeChoice GetOrderedChoice(int targetIndex, out int currentIndex)
+    { 
+        List<EpisodeChoice> scratchpad = new List<EpisodeChoice>();
+
+        foreach (var pot in Choices)
+            if (pot.Criteria.Valid())
+                scratchpad.Add(pot);
+
+        if (scratchpad.Count == 0)
+        {
+            currentIndex = 0;
+            return null;
+        }
+
+        int indexToUse = Mathf.Clamp(targetIndex, 0, scratchpad.Count-1);
+        currentIndex = (indexToUse + 1) < scratchpad.Count ? indexToUse + 1 : 0;
+        return scratchpad[indexToUse];
+    }
+
     public EpisodeChoice GetRandomDarkChoice()
     {
         return EpisodeChoice.GetRandomChoice(DarkChoices);
