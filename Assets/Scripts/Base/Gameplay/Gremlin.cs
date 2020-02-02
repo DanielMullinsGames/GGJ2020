@@ -34,6 +34,9 @@ public class Gremlin : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = (mCurrentTarget.position - transform.position).normalized * Speed;
         }
+
+        if (!GameStateManager.Instance.Playing)
+            Destroy(gameObject);
     }
 
     internal void TriggerHit()
