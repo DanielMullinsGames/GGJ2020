@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/IntroScreen.unity
+    guid: 3a172c416f1e25648932bc9e8bc40f39
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 378a624a71e865647b004d9b88ed836b
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: b17eae851ebb6b742b4a109d67db5309
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: b8d704b48c6f57c489175813cb210f17
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 438fd19e54022b64aa98b9da88e9c2ca
   m_configObjects: {}

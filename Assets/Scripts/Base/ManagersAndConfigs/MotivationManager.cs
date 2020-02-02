@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class MotivationManager : MonoBehaviour
 {
     public static MotivationManager Instance;
 
     public List<MotivationScore> MotivationScores;
+    public static List<MotivationScore> SavedScores = new List<MotivationScore>();
 
     private void Awake()
     {
@@ -38,5 +40,11 @@ public class MotivationManager : MonoBehaviour
         foreach (var entry in MotivationScores)
             if (entry.Type == score.Type)
                 entry.Score += score.Score;
+    }
+
+    internal void SaveScore()
+    {
+        SavedScores.Clear();
+        SavedScores.AddRange(MotivationScores);
     }
 }

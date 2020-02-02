@@ -14,6 +14,6 @@ public class VignetteController : MonoBehaviour
 
     public void SetIntensity(float value)
     {
-        vignetteAndChromaticAberration.intensity = value;
+        vignetteAndChromaticAberration.intensity = Mathf.Min(value, 1f);
     }
 }

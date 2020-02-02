@@ -72,7 +72,7 @@ MonoBehaviour:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: Get Drunk
+    Text: Liquor Store
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d424ad50f58d1c5488980d15201ae4cd, type: 2}

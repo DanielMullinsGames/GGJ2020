@@ -71,6 +71,6 @@ public class MenuPlayerSlot : MonoBehaviour
             PlayerManager.ActivePlayers[m_PlayerNum] = false;
 
         if (starting && PlayerManager.ActivePlayers[m_PlayerNum] && PlayerManager.HasEnoughPlayers())
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
     }
 }

@@ -18,4 +18,9 @@ public class TimeOutController : MonoBehaviour
             VigController.SetIntensity(IntensityCurve.Evaluate(timeLeft));
         }
     }
+
+    public void SetIntensity(float value)
+    {
+        VigController.SetIntensity(value);
+    }
 }

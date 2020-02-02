@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 [System.Serializable]
 public struct HealthEntry
@@ -13,6 +14,7 @@ public struct HealthEntry
 public class HealthManager : MonoBehaviour
 {
     public static HealthManager Instance;
+    public static int SavedScore;
 
     public int Health;
     public int MaxHealth;
@@ -56,5 +58,10 @@ public class HealthManager : MonoBehaviour
             healthBarUI.gameObject.SetActive(true);
             healthBarUI.UpdateHealth(Health);
         }
+    }
+
+    internal void SaveScore()
+    {
+        SavedScore = Health;
     }
 }
