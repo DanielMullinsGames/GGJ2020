@@ -29,6 +29,9 @@ public class GunHandler : MonoBehaviour
 
     void Update()
     {
+        if (!GameStateManager.Instance.Playing)
+            mCurrentReload = 0.1f;
+
         mCurrentReload -= Time.deltaTime;
 
         if (mInputHandler.Axis != Vector2.zero)
@@ -65,6 +68,9 @@ public class GunHandler : MonoBehaviour
 
     private void Fire()
     {
+        if (mCurrentReload > 0f)
+            return;
+
         ButtonPressedSound.Play();
 
         mCurrentReload = ReloadTime;
