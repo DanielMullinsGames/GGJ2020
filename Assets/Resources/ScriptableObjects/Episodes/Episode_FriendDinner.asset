@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Episode_FriendDinner
   m_EditorClassIdentifier: 
   BackgroundPrefab: {fileID: 0}
+  EpisodeDecorators: []
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: You go to dinner with your friend. They asks about your head
+    Text: You go to dinner with your friend. They ask about your head.
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -30,7 +31,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: You waffle and quickly change the subject
+    Outcome: You waffle and quickly change the subject.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -44,7 +45,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: You portray yourself as a victim, to gain their sympathy
+    Outcome: You portray yourself as a victim, to gain their sympathy.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -58,7 +59,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: "It hurts, but you let them know how you\u2019ve been feeling lately"
+    Outcome: "It hurts, but you let them know how you\u2019ve been feeling lately."
     EndsGame: 0
     HealthChange: 2
   DarkChoices:
@@ -69,6 +70,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: You go on a long rant about how the world is against you
+    Outcome: You go on a long rant about how the world is against you.
     EndsGame: 0
     HealthChange: -1

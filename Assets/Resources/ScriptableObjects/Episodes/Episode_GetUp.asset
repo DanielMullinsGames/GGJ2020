@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackgroundPrefab: {fileID: 2830792282453287762, guid: 9cf537c2185bfc447b1e2e9354c082d3,
     type: 3}
+  EpisodeDecorators: []
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: You wake up on the couch in your  living room
+    Text: You wake up on the couch in your  living room.
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -31,7 +32,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 11400000, guid: 2e69520192e67414fbf074835f86ed66, type: 2}
     NextScene: {fileID: 11400000, guid: 61c476c97990c2a4bae1472fdfca6ff5, type: 2}
-    Outcome: You get up and go for a morning run
+    Outcome: You get up and go for a morning run.
     EndsGame: 0
     HealthChange: 1
   - Criteria:
@@ -45,7 +46,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: "First breakfast. You\u2019re always hungry these days"
+    Outcome: "First breakfast. You\u2019re always hungry these days."
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -57,7 +58,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
     NextScene: {fileID: 11400000, guid: 52403cb1dd50d2244bfe891e32286900, type: 2}
-    Outcome: You hit the snooze for a little longer
+    Outcome: You hit the snooze for a little longer.
     EndsGame: 0
     HealthChange: 0
   DarkChoices:
@@ -68,6 +69,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 11400000, guid: e509889609b44d34396a58b77eb0acc1, type: 2}
     NextScene: {fileID: 11400000, guid: 1262652333cc1664ca3abe75c86fcfe6, type: 2}
-    Outcome: You fall back asleep
+    Outcome: You fall back asleep.
     EndsGame: 0
     HealthChange: -1

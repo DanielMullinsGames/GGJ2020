@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Episode_ExDinner
   m_EditorClassIdentifier: 
   BackgroundPrefab: {fileID: 0}
+  EpisodeDecorators: []
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
       - {fileID: 11400000, guid: 162c3e040820dcd44b75c44cac0fa282, type: 2}
       BlockingPlotPoints: []
-    Text: "You go out to a mutual old fav. It\u2019s like old times. She asks you
-      about your head"
+    Text: "You go out to a mutual old fave. It\u2019s like old times. She asks you
+      about your head."
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
-    Text: "You go out to a mutual old fav. It\u2019s a bit awkward. She asks you
-      about your head"
+    Text: "You go out to a mutual old fave. It\u2019s a bit awkward. She asks you
+      about your head."
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -37,7 +38,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: You waffle and quickly change the subject
+    Outcome: You waffle and quickly change the subject.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -51,7 +52,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: "It hurts, but you let her know how you\u2019ve been feeling lately"
+    Outcome: "It hurts, but you let her know how you\u2019ve been feeling lately."
     EndsGame: 0
     HealthChange: 2
   DarkChoices:
@@ -62,6 +63,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 420b2b4d94e7ec64ebcdfad214d36f8d, type: 2}
-    Outcome: You tell her it is her fault, ruining the night
+    Outcome: You tell her it is her fault, ruining the night.
     EndsGame: 0
     HealthChange: -2

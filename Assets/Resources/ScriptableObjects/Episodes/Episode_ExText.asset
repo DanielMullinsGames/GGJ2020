@@ -22,12 +22,12 @@ MonoBehaviour:
       - {fileID: 11400000, guid: 162c3e040820dcd44b75c44cac0fa282, type: 2}
       BlockingPlotPoints: []
     Text: Your ex calls you, asking for you to bring home dinner. She seems positive.
-      But you have plans with a friend
+      But you have plans with a friend.
   - Criteria:
       RequiredPlotPoints: []
       BlockingPlotPoints: []
     Text: Your ex calls you, asking for you to bring home dinner. But you have plans
-      with a friend
+      with a friend.
   Choices:
   - Criteria:
       RequiredPlotPoints: []
@@ -40,7 +40,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: d6f7392350eef5145b00507359f8e33b, type: 2}
-    Outcome: You invite her out to dinner, and she accepts
+    Outcome: You invite her out to dinner, and she accepts.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -54,7 +54,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 8ff9ad1d6d1add647b1efab458fdc830, type: 2}
-    Outcome: You've got other stuff to do
+    Outcome: You've got other stuff to do.
     EndsGame: 0
     HealthChange: 0
   - Criteria:
@@ -66,7 +66,7 @@ MonoBehaviour:
       Score: 1
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 8ff9ad1d6d1add647b1efab458fdc830, type: 2}
-    Outcome: You drop off some food before going to your friend's place
+    Outcome: You drop off some food before going to your friend's place.
     EndsGame: 0
     HealthChange: 0
   DarkChoices:
@@ -77,6 +77,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 8ff9ad1d6d1add647b1efab458fdc830, type: 2}
-    Outcome: You say you have a hot date tonight
+    Outcome: You say you have a hot date tonight.
     EndsGame: 0
     HealthChange: -1
