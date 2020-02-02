@@ -24,7 +24,6 @@ public class HealthManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        UpdateAppearance(showUI: false);
     }
 
     private void OnDestroy()
@@ -38,7 +37,7 @@ public class HealthManager : MonoBehaviour
         UpdateAppearance();
     }
 
-    private void UpdateAppearance(bool showUI = true)
+    public void UpdateAppearance(bool showUI = true)
     {
         foreach (var entry in Entries)
         {

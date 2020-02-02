@@ -34,7 +34,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Start()
     {
-        StartGame();
+        StartCoroutine(StartGame());
     }
 
     private void OnDestroy()
@@ -59,12 +59,6 @@ public class GameStateManager : MonoBehaviour
             SceneManager.LoadScene(0);
     }
 
-    public void StartGame()
-    {
-        StartCoroutine(EnterEpisode(GameConfig.Instance.StartingEpisode));
-        PlayerManager.Instance.SpawnPlayers();
-    }
-
     public void SelectChoice(EpisodeChoiceBubble bubble)
     {
         if (!Playing)
@@ -83,6 +77,16 @@ public class GameStateManager : MonoBehaviour
         toController.CancelTimeOut();
         Playing = false;
         StartCoroutine(ResolveEpisode(CurrentEpisode, choice));
+    }
+
+    private IEnumerator StartGame()
+    {
+        PlayerManager.Instance.SpawnPlayers();
+        yield return EpisodeManager.Instance.TransitionScreen(GameConfig.Instance.StartingEpisode);
+        yield return new WaitForSeconds(1.5f);
+        HealthManager.Instance.UpdateAppearance(showUI: false);
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(EnterEpisode(GameConfig.Instance.StartingEpisode));
     }
 
     private IEnumerator EnterEpisode(Episode episode)
