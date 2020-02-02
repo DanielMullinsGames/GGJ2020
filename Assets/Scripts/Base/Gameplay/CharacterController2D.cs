@@ -19,6 +19,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private float mShoveStunDuration;
     [SerializeField] private AudioSource JumpSound;
     [SerializeField] private AudioSource LandSound;
+    public AudioSource StunSound;
 
     [SerializeField]
     private float k_GroundedRadius = .01f; // Radius of the overlap circle to determine if grounded
@@ -56,6 +57,14 @@ public class CharacterController2D : MonoBehaviour
     private void OnDestroy()
     {
         Characters.Remove(this);
+    }
+
+    private void Update()
+    {
+        if (mStunLeft > 0 && !StunSound.isPlaying)
+            StunSound.Play();
+        else if (mStunLeft <= 0f && StunSound.isPlaying)
+            StunSound.Stop();
     }
 
     private void FixedUpdate()

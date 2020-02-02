@@ -25,6 +25,8 @@ public class ShockChargeBar : MonoBehaviour
     [SerializeField]
     private float chargeDuration = 10f;
 
+    public AudioSource ShockSound;
+
     private float timer;
     private float mMaxBarScale;
 
@@ -40,6 +42,7 @@ public class ShockChargeBar : MonoBehaviour
         if (mSpent)
             return;
 
+        ShockSound.Play();
         Shock();
         timer = 0f;
     }
