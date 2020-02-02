@@ -38,11 +38,11 @@ public class ScorePlatform : MonoBehaviour
         {
             if (a.Score > b.Score)
             {
-                return 1;
+                return -1;
             }
             else
             {
-                return -1;
+                return 1;
             }
         });
 
