@@ -18,10 +18,13 @@ public class HealthManager : MonoBehaviour
     public int MaxHealth;
     public List<HealthEntry> Entries;
 
+    [SerializeField]
+    private HealthBarUI healthBarUI;
+
     private void Awake()
     {
         Instance = this;
-        UpdateAppearance();
+        UpdateAppearance(showUI: false);
     }
 
     private void OnDestroy()
@@ -35,7 +38,7 @@ public class HealthManager : MonoBehaviour
         UpdateAppearance();
     }
 
-    private void UpdateAppearance()
+    private void UpdateAppearance(bool showUI = true)
     {
         foreach (var entry in Entries)
         {
@@ -47,6 +50,12 @@ public class HealthManager : MonoBehaviour
                 foreach (var off in entry.Off)
                     off.SetActive(false);
             }
+        }
+
+        if (showUI)
+        {
+            healthBarUI.gameObject.SetActive(true);
+            healthBarUI.UpdateHealth(Health);
         }
     }
 }
