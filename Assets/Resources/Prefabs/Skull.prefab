@@ -127,8 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
     type: 3}
-  MinTime: 5
-  MaxTime: 20
+  MinTime: 2
+  MaxTime: 6
 --- !u!1 &1100490911764228118
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,8 +344,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
     type: 3}
-  MinTime: 5
-  MaxTime: 20
+  MinTime: 3
+  MaxTime: 7
 --- !u!1 &2845626259280601896
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,8 +799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabToSpawn: {fileID: 2331260427477214993, guid: 8686886ef44251b49af12796711e43a6,
     type: 3}
-  MinTime: 5
-  MaxTime: 20
+  MinTime: 2
+  MaxTime: 6
 --- !u!1 &7733895959533095349
 GameObject:
   m_ObjectHideFlags: 0
