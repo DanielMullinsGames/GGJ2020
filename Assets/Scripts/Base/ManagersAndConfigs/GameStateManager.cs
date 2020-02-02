@@ -78,6 +78,7 @@ public class GameStateManager : MonoBehaviour
 
         while (Playing)
         {
+            /*
             if (timeOutChoice != null)
             {
                 timeLeft -= Time.deltaTime;
@@ -86,6 +87,7 @@ public class GameStateManager : MonoBehaviour
                 if (timeLeft <= 0f)
                     yield return StartCoroutine(ShowFailedToMakeChoice(episode, timeOutChoice));
             }
+            */
 
             yield return null;
         }

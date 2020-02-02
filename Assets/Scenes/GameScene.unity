@@ -310,7 +310,7 @@ MonoBehaviour:
   CurrentEpisode: {fileID: 0}
   GameOverScreen: {fileID: 1957139819}
   LoseScreen: {fileID: 733034768}
-  TimeUntilTimeOut: 15
+  TimeUntilTimeOut: 30
   ScoreUI: {fileID: 746877067}
 --- !u!114 &512275690
 MonoBehaviour:
@@ -365,6 +365,24 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
+      time: 1.4145178
+      value: 0.0132134855
+      inSlope: -0.5330602
+      outSlope: -0.5330602
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.9120519
+      value: 0.35779706
+      inSlope: -0.47321773
+      outSlope: -0.47321773
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 2.3303318
       value: 0.004170805
       inSlope: 0.063889116
@@ -383,6 +401,24 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
+      time: 2.917884
+      value: 0.06906861
+      inSlope: -0.59345764
+      outSlope: -0.59345764
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3.304311
+      value: 0.2979224
+      inSlope: -0.20948939
+      outSlope: -0.20948939
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 3.511462
       value: 0.012446947
       inSlope: 0.053550653
@@ -392,8 +428,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 4.8885207
-      value: 0.3060344
+      time: 4.7280593
+      value: 0.29730636
       inSlope: 0.011308975
       outSlope: 0.011308975
       tangentMode: 0
@@ -2189,6 +2225,16 @@ PrefabInstance:
       propertyPath: ExitEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 916420476}
+    - target: {fileID: 5767037955792782551, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736590902017047494, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: m_VelocityToSet.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 7876289754538136411, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
         type: 3}
       propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
