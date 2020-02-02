@@ -334,7 +334,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 4733449382854066545, guid: 8465298f1ba80034bbdc0cd49864e0d8,
     type: 3}
   FireSpeed: 2
-  ReloadTime: 0.1
+  ReloadTime: 0
   MaxAngle: 40
   RotateSpeed: -100
   FirePoint: {fileID: 5805703079443956318}
