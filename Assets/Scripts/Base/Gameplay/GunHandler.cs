@@ -17,6 +17,9 @@ public class GunHandler : MonoBehaviour
     private PlayerControlInputHandler mInputHandler;
     private float mCurrentReload;
 
+    [SerializeField]
+    private Animator cannonAnim;
+
     void Start()
     {
         mInputHandler = GetComponent<PlayerControlInputHandler>();
@@ -39,6 +42,13 @@ public class GunHandler : MonoBehaviour
 
         mInputHandler.ConsumeInput();
 
+#if UNITY_EDITOR
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Space))
+        {
+            Fire();
+        }
+#endif
+
     }
 
     private void Move(Vector2 axis)
@@ -60,7 +70,15 @@ public class GunHandler : MonoBehaviour
         fireObj.GetComponent<Rigidbody2D>().velocity = direction.normalized * FireSpeed;
         fireObj.transform.eulerAngles = new Vector3(0f, 0f, UnityEngine.Random.value * 360f);
 
+        cannonAnim.Play("shoot", 0, 0f);
+
         if (FireParticles != null)
-            FireParticles.Play();
+        {
+            var particles = Instantiate(FireParticles.gameObject);
+            particles.gameObject.SetActive(true);
+            particles.transform.position = FireParticles.transform.position;
+            particles.transform.rotation = FireParticles.transform.rotation;
+            Destroy(particles.gameObject, 1f);
+        }
     }
 }
