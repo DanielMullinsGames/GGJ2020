@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     {
         if (Instance  == null)
         {
+            mMusicPlayer = GetComponent<AudioSource>();
             Instance = this;
             transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
