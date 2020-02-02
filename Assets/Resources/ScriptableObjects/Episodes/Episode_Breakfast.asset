@@ -72,6 +72,6 @@ MonoBehaviour:
     Scores: []
     PlotToApply: {fileID: 0}
     NextScene: {fileID: 11400000, guid: 18f8504edf9541d41bc3b64025aaf1eb, type: 2}
-    Outcome: You make a snarky commen as you slip out the door
+    Outcome: You make a snarky comment as you slip out the door
     EndsGame: 0
     HealthChange: -1

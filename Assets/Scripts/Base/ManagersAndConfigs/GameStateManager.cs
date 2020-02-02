@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,10 +14,14 @@ public class GameStateManager : MonoBehaviour
     public Episode CurrentEpisode;
     public GameObject GameOverScreen;
     public GameObject LoseScreen;
+    public float TimeUntilTimeOut;
+
+    private TimeOutController toController;
 
     private void Awake()
     {
         Instance = this;
+        toController = GetComponent<TimeOutController>();
     }
 
     private void Start()
@@ -40,6 +45,7 @@ public class GameStateManager : MonoBehaviour
         if (!Playing)
             return;
 
+        toController.CancelTimeOut();
         Playing = false;
         StartCoroutine(ResolveEpisode(CurrentEpisode, choice));
     }
@@ -60,11 +66,33 @@ public class GameStateManager : MonoBehaviour
     private IEnumerator PlayEpisode(Episode episode)
     {
         Playing = true;
+        EpisodeChoice timeOutChoice = episode.GetRandomDarkChoice();
+        float timeLeft = TimeUntilTimeOut;
 
         EpisodeManager.Instance.DisplayPlayingEpisode(episode);
 
         while (Playing)
+        {
+            if (timeOutChoice != null)
+            {
+                timeLeft -= Time.deltaTime;
+                toController.SetCurrentTimeOut(timeOutChoice, timeLeft);
+
+                if (timeLeft <= 0f)
+                    yield return StartCoroutine(ShowFailedToMakeChoice(episode, timeOutChoice));
+            }
+
             yield return null;
+        }
+    }
+
+    private IEnumerator ShowFailedToMakeChoice(Episode episode, EpisodeChoice timeOutChoice)
+    {
+        Playing = false;
+        EpisodeManager.Instance.DisplayFailedToChoose(timeOutChoice);
+        yield return new WaitForSeconds(1f);
+        toController.CancelTimeOut();
+        StartCoroutine(ResolveEpisode(CurrentEpisode, timeOutChoice));
     }
 
     private IEnumerator ResolveEpisode(Episode episode, EpisodeChoice choice)

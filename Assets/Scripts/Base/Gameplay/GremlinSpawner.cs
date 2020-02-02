@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class GremlinSpawner : MonoBehaviour
@@ -29,10 +29,24 @@ public class GremlinSpawner : MonoBehaviour
         }
     }
 
+    private static List<EpisodeChoiceBubble> sValidChoices = new List<EpisodeChoiceBubble>();
+
     private void AttemptSpawnGremlin()
     {
         if (EpisodeChoiceBubble.CurrentBubbles.Count == 0)
             return;
+
+        foreach (var bubble in EpisodeChoiceBubble.CurrentBubbles)
+            if (!bubble.IsDark)
+                sValidChoices.Add(bubble);
+
+        if (sValidChoices.Count == 0)
+        {
+            sValidChoices.Clear();
+            return;
+        }
+
+        sValidChoices.Clear();
 
         if (GameStateManager.Instance.CurrentEpisode == null)
             return;
