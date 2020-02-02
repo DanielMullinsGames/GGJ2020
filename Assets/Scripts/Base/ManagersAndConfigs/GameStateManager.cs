@@ -17,6 +17,7 @@ public class GameStateManager : MonoBehaviour
     public GameObject LoseScreen;
     public float TimeUntilTimeOut;
     public ScoreUI ScoreUI;
+    public bool ChangingScene;
 
     [SerializeField] private EpisodeChoice episodeToTrigger;
     [SerializeField] private bool TriggerEpisodeToTrigger;
@@ -53,6 +54,9 @@ public class GameStateManager : MonoBehaviour
             SelectChoice(episodeToTrigger);
             TriggerEpisodeToTrigger = false;
         }
+
+        if (ChangingScene)
+            SceneManager.LoadScene(0);
     }
 
     public void StartGame()

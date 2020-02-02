@@ -2418,6 +2418,26 @@ PrefabInstance:
       propertyPath: ExitEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 916420476}
+    - target: {fileID: 3247563427536844107, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: Health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458081472850906112, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: ExitEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458081472850906112, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1914838056}
+    - target: {fileID: 4458081472850906112, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerFire
+      objectReference: {fileID: 0}
     - target: {fileID: 4788310679456504580, guid: 6afc1e7fc0d8ceb40854e04ebad95043,
         type: 3}
       propertyPath: Cooldown

@@ -7,7 +7,7 @@ public class SpawnObjectOnDestroy : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (ObjToSpawn != null)
+        if (ObjToSpawn != null && GameStateManager.Instance != null && !GameStateManager.Instance.ChangingScene)
             GameObject.Instantiate(ObjToSpawn, transform.position, ObjToSpawn.transform.rotation);
     }
 }
