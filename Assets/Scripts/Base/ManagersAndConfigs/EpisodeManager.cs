@@ -79,7 +79,16 @@ public class EpisodeManager : MonoBehaviour
         mEpisodeDecorationObjects.Clear();
 
         foreach (var gameObj in toTearDown)
-            Destroy(gameObj);
+        {
+            if (gameObj.GetComponent<TweeningBackgroundElement>())
+            {
+                gameObj.GetComponent<TweeningBackgroundElement>().TweenOut();
+            }
+            else
+            {
+                Destroy(gameObj);
+            }
+        }
     }
 
     public void DisplayFailedToChoose(EpisodeChoice timeOutChoice)

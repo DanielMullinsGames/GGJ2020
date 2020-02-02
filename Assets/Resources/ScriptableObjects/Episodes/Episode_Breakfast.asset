@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Episode_Breakfast
   m_EditorClassIdentifier: 
   BackgroundPrefab: {fileID: 0}
+  EpisodeDecorators:
+  - {fileID: 6853781972599056112, guid: cb1e4f04074b5314dad1912290913505, type: 3}
   PotentialDescriptions:
   - Criteria:
       RequiredPlotPoints:
