@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &36930800901446102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2440029378218947409, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.868
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.532
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760841, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831130418760846, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831131048606847, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831131098160519, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.43137258
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831131098160519, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831131098160519, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.19607845
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831131225425869, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490831131807046341, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4014228161659255221, guid: 838aef826ad62a74180e3758e7375a37,
+        type: 3}
+    - target: {fileID: 4490831131807046394, guid: df386eb54d3e8f849a63c6f193a9a6b5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.166
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df386eb54d3e8f849a63c6f193a9a6b5, type: 3}
