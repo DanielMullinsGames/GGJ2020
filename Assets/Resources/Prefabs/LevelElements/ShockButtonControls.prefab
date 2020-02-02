@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795679821936482964}
+  - component: {fileID: 4756848635122388285}
   m_Layer: 0
   m_Name: ShockButtonControls
   m_TagString: Untagged
@@ -29,9 +30,178 @@ Transform:
   m_Children:
   - {fileID: 4795679821754397961}
   - {fileID: 3042804374899435785}
+  - {fileID: 3166529774786430468}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4756848635122388285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795679821936482967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e70b2cd44d407409e3e781c6a2ad15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SafeArea: {fileID: 5046514571384982192}
+  Spring: {fileID: 3042804376021745985}
+  Cooldown: 10
+--- !u!1 &6532596835447547251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6557796397996577751}
+  - component: {fileID: 5930388887153329346}
+  - component: {fileID: 7110975287901722480}
+  m_Layer: 13
+  m_Name: Detector (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6557796397996577751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532596835447547251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.267, z: 0}
+  m_LocalScale: {x: 0.33, y: -0.032544, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3042804374899435785}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5930388887153329346
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532596835447547251}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &7110975287901722480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532596835447547251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e673a3c7e74bc7c47b5e21997413e0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggeredEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795679821754397958}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4756848635122388285}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ExitEvents: []
+--- !u!1 &7239250501386029310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3166529774786430468}
+  - component: {fileID: 5046514571384982192}
+  m_Layer: 0
+  m_Name: SafeArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3166529774786430468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7239250501386029310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.057, y: 0.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4795679821936482964}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5046514571384982192
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7239250501386029310}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.22, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!1001 &3261980228092208620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -215,7 +385,7 @@ PrefabInstance:
     - target: {fileID: 7545670222417734485, guid: 6cc836a56fc795e4b99ead0d91adccfd,
         type: 3}
       propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7545670222417734485, guid: 6cc836a56fc795e4b99ead0d91adccfd,
         type: 3}
@@ -252,6 +422,31 @@ PrefabInstance:
       propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7545670222417734485, guid: 6cc836a56fc795e4b99ead0d91adccfd,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545670222417734485, guid: 6cc836a56fc795e4b99ead0d91adccfd,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545670222417734485, guid: 6cc836a56fc795e4b99ead0d91adccfd,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4756848635122388285}
+    - target: {fileID: 7545670222417734485, guid: 6cc836a56fc795e4b99ead0d91adccfd,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerShock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545670222417734485, guid: 6cc836a56fc795e4b99ead0d91adccfd,
+        type: 3}
+      propertyPath: TriggeredEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7794615887261360918, guid: 6cc836a56fc795e4b99ead0d91adccfd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cc836a56fc795e4b99ead0d91adccfd, type: 3}
@@ -270,6 +465,12 @@ SpriteRenderer:
 --- !u!50 &3042804376021745984 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 7545670223096454428, guid: 6cc836a56fc795e4b99ead0d91adccfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4795679821989403740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!231 &3042804376021745985 stripped
+SpringJoint2D:
+  m_CorrespondingSourceObject: {fileID: 7545670223096454429, guid: 6cc836a56fc795e4b99ead0d91adccfd,
     type: 3}
   m_PrefabInstance: {fileID: 4795679821989403740}
   m_PrefabAsset: {fileID: 0}
