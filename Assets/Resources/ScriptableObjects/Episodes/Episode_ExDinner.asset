@@ -68,3 +68,4 @@ MonoBehaviour:
     Outcome: You tell her it is her fault, ruining the night.
     EndsGame: 0
     HealthChange: -2
+  AudioClip: {fileID: 8300000, guid: bbff042c4d7c88a408b15ce9c3d95df1, type: 3}

@@ -57,7 +57,11 @@ public class GameStateManager : MonoBehaviour
         }
 
         if (ChangingScene)
+        {
+            AudioManager.Instance.PlayMenuMusic();
             SceneManager.LoadScene(1);
+        }
+
     }
 
     public void SelectChoice(EpisodeChoiceBubble bubble)
@@ -210,6 +214,7 @@ public class GameStateManager : MonoBehaviour
             yield return null;
         }
 
+        AudioManager.Instance.PlayMenuMusic();
         SceneManager.LoadScene(4);
     }
 
@@ -225,6 +230,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
+        AudioManager.Instance.PlayMenuMusic();
         SceneManager.LoadScene(3);
     }
 }

@@ -31,6 +31,7 @@ public class EpisodeManager : MonoBehaviour
 
     public void DisplayEnterEpisode(Episode episode)
     {
+        AudioManager.Instance.SetMusic(episode.AudioClip);
         DescriptionUI.PlayMessage(episode.GetEpisodeText());
     }
 

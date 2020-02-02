@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
+
+    public AudioClip MenuMusic;
 
     private AudioSource mMusicPlayer;
 
@@ -24,6 +27,17 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    internal void SetMusic(AudioClip audioClip)
+    {
+        if (audioClip != null && mMusicPlayer.clip != audioClip)
+        {
+            mMusicPlayer.clip = audioClip;
+            mMusicPlayer.Play();
+        }
+    }
 
-
+    public void PlayMenuMusic()
+    {
+        SetMusic(MenuMusic);
+    }
 }

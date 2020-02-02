@@ -81,3 +81,4 @@ MonoBehaviour:
     Outcome: You pretend you're going through a tunnel and hang up.
     EndsGame: 0
     HealthChange: -1
+  AudioClip: {fileID: 8300000, guid: bbff042c4d7c88a408b15ce9c3d95df1, type: 3}

@@ -38,6 +38,7 @@ public class Episode : ScriptableObject
     public List<EpisodeText> PotentialDescriptions;
     public List<EpisodeChoice> Choices;
     public List<EpisodeChoice> DarkChoices;
+    public AudioClip AudioClip;
 
     public EpisodeChoice GetRandomChoice()
     {

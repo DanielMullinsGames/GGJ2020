@@ -80,3 +80,4 @@ MonoBehaviour:
     Outcome: You say you have a hot date tonight.
     EndsGame: 0
     HealthChange: -1
+  AudioClip: {fileID: 8300000, guid: 8d581a4848499704b9aa4bcecc878559, type: 3}

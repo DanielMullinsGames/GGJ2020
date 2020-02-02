@@ -72,3 +72,4 @@ MonoBehaviour:
     Outcome: You fall back asleep.
     EndsGame: 0
     HealthChange: -1
+  AudioClip: {fileID: 8300000, guid: cfa9fabf816c61d4e9dbe94e225d7825, type: 3}
