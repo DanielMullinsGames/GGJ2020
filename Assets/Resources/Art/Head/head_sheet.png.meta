@@ -143,9 +143,9 @@ TextureImporter:
       name: head_sheet_0
       rect:
         serializedVersion: 2
-        x: 403
+        x: 399
         y: 0
-        width: 288
+        width: 296
         height: 229
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
